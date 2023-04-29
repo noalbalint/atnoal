@@ -1,2 +1,1 @@
-# atnoal
-Personal blog/portfolio
+noal.at
