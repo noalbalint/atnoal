@@ -1,5 +1,5 @@
+import React from 'react'
 import { useState } from 'react'
-import Header from './components/Header';
 import './App.css'
 
 function App() {
@@ -7,7 +7,6 @@ function App() {
 
   return (
     <>
-      <Header />
       <h1>Noals website</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
