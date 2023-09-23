@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import Home from './pages/Home'
+import Velofood from './pages/Velofood'
 import './index.css'
 import './tailwind.css'
 import {
@@ -11,17 +12,13 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
     errorElement: <p>404 - That page doesn't exist</p>,
   },
   {
-    path: "/hire",
-    element: <p>plz hire me jonathan</p>,
+    path: "/velofood",
+    element: <Velofood />,
   },
-  {
-    path: "/hire/velofood",
-    element: <p>Velofood resume</p>,
-  }
 ]);
 
 
