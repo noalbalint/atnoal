@@ -7,9 +7,9 @@ const HorizontalSection = styled.div`
   width: 66%;
   display: flex;
   align-items: center;
-  padding: 1.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: #F8FAFC;
 `;
 
 const VerticalSectionLeft = styled.div`
@@ -30,6 +30,7 @@ const VerticalSectionRight = styled.div`
 `;
 
 const Paragraph = styled.p`
+  width: 100%;
   text-align: left;
   margin-bottom: 12px;
 `;
@@ -46,8 +47,14 @@ const Circle = styled.div`
   font-size: 20px;
 `;
 
+const Line = styled.hr`
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 300px;
+`;
+
 export function TimelineItem(
-  { title, subtexts }: { title: string, subtexts: string[]}
+  { title, subtexts }: { title: string, subtexts: string[] }
 ): React.ReactElement {
   return (
     <div className='mt-4'>
@@ -66,24 +73,36 @@ export default function Velofood(): React.ReactElement {
     <>
       <div className='flex flex-col items-center font-light'>
         {/* Contact and Motivation */}
-        <HorizontalSection className='mt-8'>
+        <HorizontalSection className='mt-8 pt-8'>
           <VerticalSectionLeft>
             {/* Photo */}
             <img src={noal} className='mb-6 mx-5 rounded-lg w-56' alt="the applicant" />
             {/* Phone */}
             <div className="inline-flex w-full pb-2">
-              <span className='w-full'>+43 699 819 483 46</span>
+              <span className='w-full' href="tel:+43 699 819 483 46">+43 699 819 483 46</span>
             </div>
             {/* Email */}
             <div className="inline-flex w-full pb-2">
-              <span className='w-full'>noalbalint@gmail.com</span>
+              <span className='w-full' href="mailto:noalbalint@gmail.com">noalbalint@gmail.com</span>
             </div>
           </VerticalSectionLeft>
           <VerticalSectionRight className='items-center pt-0'>
-            <span className='text-left text-2xl self-start'>Velofood application</span>
-            <span className='text-left text-4xl self-start pb-4'>Noal Balint, Technologieverstärker</span>
+            <span className='text-left text-4xl self-start'>Noal Balint: Technologieverstärker</span>
+            <span className='text-left text-2xl self-start pb-4'>Application to Velofood</span>
             <Paragraph>I am a frontend designer-developer with over 4 years of professional professional experience building an enterprise-grade monolithic single-page dynamic web app.</Paragraph>
+            <Paragraph>
+              The Velofood "Verstärkung in der Technik" job posting was forwarded to me through a friend,
+              and believe it would be perfect fit for my background and interests.
+            </Paragraph>
+            <Paragraph>
+              I love bikes, and most Wednesdays you can find me turning a wrench at Maghanoy. The opportunity to be part of a company that
+              combines cycling with technology is very appealing to me. I also appreciate that you offer a flexible work schedule, as I would love
+              to finally experience the 20-hour week.
+            </Paragraph>
           </VerticalSectionRight>
+        </HorizontalSection>
+        <HorizontalSection className='content-center'>
+          <Line /> <span> Summary of Professional Experience </span> <Line />
         </HorizontalSection>
         {/* Professional Experience Timeline */}
         <HorizontalSection>
@@ -99,10 +118,10 @@ export default function Velofood(): React.ReactElement {
             <Circle id='first-circle' />
             <Circle style={{ marginTop: '1.75rem' }} />
             <Circle style={{ marginTop: '4.75rem' }} />
-            <Circle style={{ marginTop: '11.75rem' }} />
-            <Circle style={{ marginTop: '10rem' }} />
-            <Circle style={{ marginTop: '4.5rem' }} />
-            <Circle style={{ marginTop: '10rem' }} id='last-circle' />
+            <Circle style={{ marginTop: '11.5rem' }} />
+            <Circle style={{ marginTop: '9.75rem' }} />
+            <Circle style={{ marginTop: '4.75rem' }} />
+            <Circle style={{ marginTop: '9.75rem' }} id='last-circle' />
           </VerticalSectionLeft>
           <VerticalSectionRight className='items-start self-start'>
             <span className='font-medium'>Born in Vancouver, Canada</span>
@@ -157,6 +176,11 @@ export default function Velofood(): React.ReactElement {
               ]}
             />
           </VerticalSectionRight>
+        </HorizontalSection>
+        <HorizontalSection>
+          <Paragraph>
+            This site exists solely to apply to Velofood. Though my main frontend framework is Vue, I chose to build this site with React to demonstrate my ability to learn new technologies.
+          </Paragraph>
         </HorizontalSection>
       </div>
     </>
