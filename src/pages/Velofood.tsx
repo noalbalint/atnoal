@@ -109,21 +109,25 @@ export default function Velofood(): React.ReactElement {
               <span className='w-full' href="mailto:noalbalint@gmail.com">noalbalint@gmail.com</span>
             </div>
             {/* Languages */}
-            <div className='flex items-center pt-2'>
-              <span className='pr-2'>German</span>
-              <Circle className='mr-1' />
-              <Circle className='mr-1' />
-              <OutlinedCircle className='mr-1' />
-              <OutlinedCircle className='mr-1' />
-              <OutlinedCircle className='mr-1' />
+            <div className='flex items-center justify-between pt-2 w-48'>
+              <span style={{ marginRight: '45px'}}>German</span>
+              <div className='flex'>
+                <Circle className='mr-1' />
+                <Circle className='mr-1' />
+                <OutlinedCircle className='mr-1' />
+                <OutlinedCircle className='mr-1' />
+                <OutlinedCircle className='mr-1' />
+              </div>
             </div>
-            <div className='flex items-center pt-2'>
-              <span className='pr-2'>English</span>
-              <Circle className='mr-1' />
-              <Circle className='mr-1' />
-              <Circle className='mr-1' />
-              <Circle className='mr-1' />
-              <Circle className='mr-1' />
+            <div className='flex items-center justify-between pt-2 w-48'>
+              <span style={{ marginRight: '51px'}}>English</span>
+              <div className='flex'>
+                <Circle className='mr-1' />
+                <Circle className='mr-1' />
+                <Circle className='mr-1' />
+                <Circle className='mr-1' />
+                <Circle className='mr-1' />
+              </div>
             </div>
           </VerticalSectionLeft>
           <VerticalSectionRight className='items-center pt-0'>
