@@ -24,6 +24,7 @@ export default function LogoCarousel(): React.ReactElement {
         totalSlides={4}
         isPlaying={true}
         infinite={true}
+        interval={3000}
       >
         <Slider>
           <Slide index={0}>
@@ -69,8 +70,6 @@ export default function LogoCarousel(): React.ReactElement {
             </div>
           </Slide>
         </Slider>
-        <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext>
       </CarouselProvider>
     </>
   )
