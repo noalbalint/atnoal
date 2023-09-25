@@ -2,6 +2,7 @@ import React from 'react'
 import noal from '@/assets/noal.jpg'
 import styled from 'styled-components';
 import DrawLine from '../components/DrawLine'
+import LogoCarousel from '../components/LogoCarousel';
 
 const HorizontalSection = styled.div`
   width: 66%;
@@ -220,7 +221,12 @@ export default function Velofood(): React.ReactElement {
           </VerticalSectionRight>
         </HorizontalSection>
         <HorizontalSection className='justify-center'>
-          <Line /> <span> Technologies </span> <Line />
+          <div className='flex flex-col'>
+            <div className='flex mb-8'>
+              <Line /> <span className='px-24'> Technologies </span> <Line />
+            </div>
+            <LogoCarousel />
+          </div>
         </HorizontalSection>
         <HorizontalSection>
           <Paragraph>
