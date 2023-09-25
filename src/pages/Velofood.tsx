@@ -103,11 +103,11 @@ export default function Velofood(): React.ReactElement {
             <img src={noal} className='mb-6 mx-5 rounded-lg w-56' alt="the applicant" />
             {/* Phone */}
             <div className="inline-flex w-full pb-2">
-              <span className='w-full' href="tel:+43 699 819 483 46">+43 699 819 483 46</span>
+              <span className='w-full'>+43 699 819 483 46</span>
             </div>
             {/* Email */}
             <div className="inline-flex w-full pb-2">
-              <span className='w-full' href="mailto:noalbalint@gmail.com">noalbalint@gmail.com</span>
+              <span className='w-full'>noalbalint@gmail.com</span>
             </div>
             {/* Languages */}
             <div className='flex items-center justify-between pt-2 w-48'>
