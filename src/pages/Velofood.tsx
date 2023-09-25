@@ -14,6 +14,7 @@ const HorizontalSection = styled.div`
 
 const VerticalSectionLeft = styled.div`
   width: 33%;
+  align-self: start;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,9 +23,10 @@ const VerticalSectionLeft = styled.div`
 
 const VerticalSectionRight = styled.div`
   width: 66%;
+  align-self: start;
   display: flex;
   flex-direction: column;
-  padding: 0 1.5rem 0 1.5rem;
+  padding: 1.5rem;
 `;
 
 const Paragraph = styled.p`
@@ -44,17 +46,18 @@ const Circle = styled.div`
   font-size: 20px;
 `;
 
-export function TimelineItem({ title, subtexts }: { title: string, subtexts: string[] }): React.ReactElement {
+export function TimelineItem(
+  { title, subtexts }: { title: string, subtexts: string[]}
+): React.ReactElement {
   return (
-    <>
-      <span className='font-medium'>{title}</span>
-      {/* for each subtext, put it in a bullet-point list */}
+    <div className='mt-4'>
+      <p className='font-medium text-left'>{title}</p>
       <ul>
         {subtexts.map((subtext) => (
           <li className='pl-2 text-left'>- {subtext}</li>
         ))}
       </ul>
-    </>
+    </div>
   )
 }
 
@@ -87,41 +90,72 @@ export default function Velofood(): React.ReactElement {
         <HorizontalSection>
           <VerticalSectionLeft>
             {/*
-              To determind the distanceToScroll after making changes, run this in the browser console:
+              To recalculate the distanceToScroll after making changes, run this in the browser console:
 
               const firstCircle = document.querySelector('#first-circle');
               const lastCircle = document.querySelector('#last-circle');
               console.log(lastCircle.getBoundingClientRect().top - firstCircle.getBoundingClientRect().top);
              */}
-            <DrawLine distanceToScroll="260" className='mr-4'/>
+            <DrawLine distanceToScroll="804" className='mr-4' />
             <Circle id='first-circle' />
-            <Circle className='mt-20'/>
-            <Circle className='mt-20'/>
-            <Circle id='last-circle' className='mt-10'/>
+            <Circle style={{ marginTop: '1.75rem' }} />
+            <Circle style={{ marginTop: '4.75rem' }} />
+            <Circle style={{ marginTop: '11.75rem' }} />
+            <Circle style={{ marginTop: '10rem' }} />
+            <Circle style={{ marginTop: '4.5rem' }} />
+            <Circle style={{ marginTop: '10rem' }} id='last-circle' />
           </VerticalSectionLeft>
-          <VerticalSectionRight>
+          <VerticalSectionRight className='items-start self-start'>
+            <span className='font-medium'>Born in Vancouver, Canada</span>
             <TimelineItem
               title="Early Career"
               subtexts={[
-                "Various public-facing roles in restaurants, surf shops, and film sets",
-                "Developed soft-skills such as communication, time management and task prioritization, humility, empathy, attention to detail"
+                "Develop soft-skill through various roles in restaurants, surf shops, and film sets",
+                "Communication, humility, task prioritization, and attention to detail"
               ]}
             />
             <TimelineItem
-              title="Early Career"
-              subtexts={["asdf"]}
+              title="Intern at Echosec Systems"
+              subtexts={[
+                "Why is nobody asking me to implement a linked-list in C++ or convert an RGB to a hex code by hand? University didn't prepare me for this at all!",
+                "Shadow senior developers to learn the basic technologies of web development",
+                "Complete small bugs tickets and features with considerable guidance",
+                "Learn the 'gestalt' of good programming: pull request etiquette, avoiding bikeshedding, code documentation, naming, and structure, etcetera",
+              ]}
             />
             <TimelineItem
-              title="Early Career"
-              subtexts={["asdf"]}
+              title="SWE I at Echosec Systems"
+              subtexts={[
+                "Work semi-independently on mentored projects",
+                "Make meaningful contributions in the code review process.",
+                "Ownership of small bugs tickets and features with some guidance from mentors",
+                "Developing high-level understanding of the company/codebase as a whole",
+                "Transition to fully-remote work due to COVID-19",
+              ]}
             />
             <TimelineItem
-              title="Early Career"
-              subtexts={["asdf"]}
+              title="Acquired by New York-based conglomerate 'Flashpoint.io'"
+              subtexts={[
+                "Transition from 40-person to 400-person organization",
+                "More heirachy, more meetings, less 'personal touch'",
+              ]}
             />
             <TimelineItem
-              title="Early Career"
-              subtexts={["asdf"]}
+              title="SWE II at Echosec Systems"
+              subtexts={[
+                "Core member of the team. Major contributor for large product initiatives",
+                "Ownership of many mid-sized features with minimal or no guidance",
+                "Translate business requirements into Figma mockups and JIRA tickets",
+                "Participate in customer calls and demos as a technical expert",
+                "Mastery of core frontend stack; beginning to dabble in PHP and Cypress",
+              ]}
+            />
+            <TimelineItem
+              title="SWE II at Velofood (?!)"
+              subtexts={[
+                "Apply skills from previous roles to a new codebase and new problem domain",
+                "Do a really good job and make everybody happy :)"
+              ]}
             />
           </VerticalSectionRight>
         </HorizontalSection>
