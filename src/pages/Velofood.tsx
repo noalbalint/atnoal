@@ -1,6 +1,7 @@
 import React from 'react'
 import noal from '@/assets/noal.jpg'
 import styled from 'styled-components';
+import DrawLine from '@/components/DrawLine'
 
 const HorizontalSection = styled.div`
   width: 66%;
@@ -46,20 +47,13 @@ const Circle = styled.div`
 export function TimelineItem({ title, subtexts }: { title: string, subtexts: string[] }): React.ReactElement {
   return (
     <>
-      <HorizontalSection>
-        <VerticalSectionLeft>
-          <Circle />
-        </VerticalSectionLeft>
-        <VerticalSectionRight className='items-start'>
-          <span className='font-medium'>{title}</span>
-          {/* for each subtext, put it in a bullet-point list */}
-          <ul>
-            {subtexts.map((subtext) => (
-              <li className='pl-2 text-left'>- {subtext}</li>
-            ))}
-          </ul>
-        </VerticalSectionRight>
-      </HorizontalSection>
+      <span className='font-medium'>{title}</span>
+      {/* for each subtext, put it in a bullet-point list */}
+      <ul>
+        {subtexts.map((subtext) => (
+          <li className='pl-2 text-left'>- {subtext}</li>
+        ))}
+      </ul>
     </>
   )
 }
@@ -90,29 +84,47 @@ export default function Velofood(): React.ReactElement {
           </VerticalSectionRight>
         </HorizontalSection>
         {/* Professional Experience Timeline */}
-        <TimelineItem
-          title="Early Career"
-          subtexts={[
-            "Various public-facing roles in restaurants, surf shops, and film sets",
-            "Developed soft-skills such as communication, time management and task prioritization, humility, empathy, attention to detail"
-          ]}
-        />
-        <TimelineItem
-          title="Early Career"
-          subtexts={["asdf"]}
-        />
-        <TimelineItem
-          title="Early Career"
-          subtexts={["asdf"]}
-        />
-        <TimelineItem
-          title="Early Career"
-          subtexts={["asdf"]}
-        />
-        <TimelineItem
-          title="Early Career"
-          subtexts={["asdf"]}
-        />
+        <HorizontalSection>
+          <VerticalSectionLeft>
+            {/*
+              To determind the distanceToScroll after making changes, run this in the browser console:
+
+              const firstCircle = document.querySelector('#first-circle');
+              const lastCircle = document.querySelector('#last-circle');
+              console.log(lastCircle.getBoundingClientRect().top - firstCircle.getBoundingClientRect().top);
+             */}
+            <DrawLine distanceToScroll="260" className='mr-4'/>
+            <Circle id='first-circle' />
+            <Circle className='mt-20'/>
+            <Circle className='mt-20'/>
+            <Circle id='last-circle' className='mt-10'/>
+          </VerticalSectionLeft>
+          <VerticalSectionRight>
+            <TimelineItem
+              title="Early Career"
+              subtexts={[
+                "Various public-facing roles in restaurants, surf shops, and film sets",
+                "Developed soft-skills such as communication, time management and task prioritization, humility, empathy, attention to detail"
+              ]}
+            />
+            <TimelineItem
+              title="Early Career"
+              subtexts={["asdf"]}
+            />
+            <TimelineItem
+              title="Early Career"
+              subtexts={["asdf"]}
+            />
+            <TimelineItem
+              title="Early Career"
+              subtexts={["asdf"]}
+            />
+            <TimelineItem
+              title="Early Career"
+              subtexts={["asdf"]}
+            />
+          </VerticalSectionRight>
+        </HorizontalSection>
       </div>
     </>
   )
