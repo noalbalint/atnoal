@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Home from './pages/Home'
 import Velofood from './pages/Velofood'
-import DrawLine from './components/DrawLine'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -16,10 +15,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
     errorElement: <p>404 - That page doesn't exist</p>,
-  },
-  {
-    path: "/scrolltest",
-    element: <DrawLine />
   },
   {
     path: "/velofood",

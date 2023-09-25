@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // Adapted from https://codepen.io/dmistry485/pen/RqwJJE and heavily modified
 export default function ScrollLine(
-  { distanceToScroll }: { distanceToScroll: number }
+  { distanceToScroll, className }: { distanceToScroll: number, className?: string }
 ): React.ReactElement {
   useEffect(() => {
     // Get a reference to the <path>
@@ -51,7 +51,7 @@ export default function ScrollLine(
   `;
 
   return (
-    <>
+    <div className={className}>
       <StyledSVG
         id='line-svg'
         version="1.1"
@@ -72,7 +72,7 @@ export default function ScrollLine(
           y2={distanceToScroll}
         />
       </StyledSVG>
-    </>
+    </div>
   )
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import noal from '@/assets/noal.jpg'
 import styled from 'styled-components';
-import DrawLine from '@/components/DrawLine'
+import DrawLine from '../components/DrawLine'
 
 const HorizontalSection = styled.div`
   width: 66%;
@@ -82,8 +82,7 @@ export default function Velofood(): React.ReactElement {
           <VerticalSectionRight className='items-center pt-0'>
             <span className='text-left text-2xl self-start'>Velofood application</span>
             <span className='text-left text-4xl self-start pb-4'>Noal Balint, Technologieverstärker</span>
-            <Paragraph>I am a frontend designer-developer with over 4 years of professional professional experience in an enterprise-grade monolithic single-page dynamic web app.</Paragraph>
-            <Paragraph>During this time, I gained proficiency in web technologies such as Vue.js, HTML/CSS + Less.js, Javascript + Typescript, Axois (AJAX libary), and Vuex (Frontent state management tool. I also had some exposure to PHP, Redis, and postgresSQL, but only small amounts.</Paragraph>
+            <Paragraph>I am a frontend designer-developer with over 4 years of professional professional experience building an enterprise-grade monolithic single-page dynamic web app.</Paragraph>
           </VerticalSectionRight>
         </HorizontalSection>
         {/* Professional Experience Timeline */}
@@ -96,7 +95,7 @@ export default function Velofood(): React.ReactElement {
               const lastCircle = document.querySelector('#last-circle');
               console.log(lastCircle.getBoundingClientRect().top - firstCircle.getBoundingClientRect().top);
              */}
-            <DrawLine distanceToScroll="804" className='mr-4' />
+            <DrawLine distanceToScroll={804} className='mr-2 mt-1' />
             <Circle id='first-circle' />
             <Circle style={{ marginTop: '1.75rem' }} />
             <Circle style={{ marginTop: '4.75rem' }} />
