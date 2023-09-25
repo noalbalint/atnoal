@@ -1,6 +1,12 @@
 #root {
-  padding: 2rem;
   text-align: center;
+  width: 100%;
+  font-size: 18px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(244 244 245);
+  color: rgb(15 23 42);
 }
 
 .logo {

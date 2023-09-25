@@ -2,12 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Home from './pages/Home'
 import Velofood from './pages/Velofood'
-import './index.css'
-import './tailwind.css'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import AnimatedCursor from "react-animated-cursor"
+import './index.css'
+import './tailwind.css'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
+    <AnimatedCursor
+      innerSize={10}
+      outerSize={27}
+      color='1, 173, 76'
+    />
     <RouterProvider router={router} />
   </React.StrictMode>,
 )

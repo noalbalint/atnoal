@@ -1,33 +1,60 @@
 import React from 'react'
 import noal from '@/assets/noal.jpg'
-import MailOutline from '@mui/icons-material/MailOutline';
-import PhoneIphone from '@mui/icons-material/PhoneIphone';
+import styled from 'styled-components';
 
-export default function Velofood (): React.ReactElement {
+const HorizontalSection = styled.div`
+  width: 66.6%;
+  display: flex;
+  align-items: center;
+  margin: 2rem;
+  padding: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity))
+`;
+
+const VerticalSectionLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1/3;
+  padding: 1.5rem;
+`;
+
+const VerticalSectionRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 2/3;
+  padding: 1.5rem;
+`;
+
+const Paragraph = styled.p`
+  text-align: left;
+  margin-bottom: 12px;
+`;
+
+export default function Velofood(): React.ReactElement {
   return (
     <>
-      {/* Layout for resume */}
-      <div className='w-2/3 flex align-center p-6'>
-        <div className='flex flex-col items-center w-1/3 p-6'>
+      <HorizontalSection>
+        <VerticalSectionLeft>
           {/* Photo */}
-          <img src={noal} className='w-82 pb-6 rounded-lg' alt="the applicant" />
+          <img src={noal} className='mb-6 mx-5 rounded-lg w-56' alt="the applicant" />
           {/* Phone */}
-          <div className="inline-flex w-full pb-2 px-2">
-            <PhoneIphone className='w-1/6'/>
-            <span className='w-full text-right'>+43 699 819 483 46</span>
+          <div className="inline-flex w-full pb-2">
+            <span className='w-full'>+43 699 819 483 46</span>
           </div>
           {/* Email */}
-          <div className="inline-flex w-full pb-2 px-2">
-            <MailOutline className='w-1/6'/>
-            <span className='w-full text-right'>noalbalint@gmail.com</span>
+          <div className="inline-flex w-full pb-2">
+            <span className='w-full'>noalbalint@gmail.com</span>
           </div>
-        </div>
-        <div className='flex flex-col w-2/3 p-6'>
-          <div>Velofood</div>
-          <div>Velofood</div>
-          <div>Velofood</div>
-        </div>
-      </div>
+        </VerticalSectionLeft>
+        <VerticalSectionRight>
+          <h1 className='pb-4 text-left'>Velofood Technologieverstärker application: Noal Balint</h1>
+          <Paragraph>I am a frontend designer-developer with over 4 years of professional professional experience in an enterprise-grade monolithic single-page dynamic web app.</Paragraph>
+          <Paragraph>During this time, I gained proficiency in web technologies such as Vue.js, HTML/CSS + Less.js, Javascript + Typescript, Axois (AJAX libary), and Vuex (Frontent state management tool. I also had some exposure to PHP, Redis, and postgresSQL, but only small amounts.</Paragraph>
+        </VerticalSectionRight>
+      </HorizontalSection>
     </>
   )
 }
