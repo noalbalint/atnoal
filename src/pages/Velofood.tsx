@@ -47,17 +47,30 @@ const Circle = styled.div`
   font-size: 20px;
 `;
 
+const OutlinedCircle = styled.div`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #b9b9b9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  margin-right: 2px;
+`;
+
 const Line = styled.hr`
   margin-left: 30px;
   margin-right: 30px;
   width: 300px;
 `;
 
-export function TimelineItem(
+function TimelineItem(
   { title, subtexts }: { title: string, subtexts: string[] }
 ): React.ReactElement {
   return (
-    <div className='mt-4'>
+    <div className='mb-4'>
       <p className='font-medium text-left'>{title}</p>
       <ul>
         {subtexts.map((subtext) => (
@@ -68,11 +81,21 @@ export function TimelineItem(
   )
 }
 
+function TimelineDate(
+  { year, style, id }: { year: string, style?: React.CSSProperties, id?: string }
+): React.ReactElement {
+  return (
+    <div className='flex items-center' style={style}>
+      <span className='pr-4'> {year} </span>
+      <Circle id={id} />
+    </div>
+  )
+}
+
 export default function Velofood(): React.ReactElement {
   return (
     <>
       <div className='flex flex-col items-center font-light'>
-        {/* Contact and Motivation */}
         <HorizontalSection className='mt-8 pt-8'>
           <VerticalSectionLeft>
             {/* Photo */}
@@ -85,10 +108,27 @@ export default function Velofood(): React.ReactElement {
             <div className="inline-flex w-full pb-2">
               <span className='w-full' href="mailto:noalbalint@gmail.com">noalbalint@gmail.com</span>
             </div>
+            {/* Languages */}
+            <div className='flex items-center pt-2'>
+              <span className='pr-2'>German</span>
+              <Circle className='mr-1' />
+              <Circle className='mr-1' />
+              <OutlinedCircle className='mr-1' />
+              <OutlinedCircle className='mr-1' />
+              <OutlinedCircle className='mr-1' />
+            </div>
+            <div className='flex items-center pt-2'>
+              <span className='pr-2'>English</span>
+              <Circle className='mr-1' />
+              <Circle className='mr-1' />
+              <Circle className='mr-1' />
+              <Circle className='mr-1' />
+              <Circle className='mr-1' />
+            </div>
           </VerticalSectionLeft>
           <VerticalSectionRight className='items-center pt-0'>
-            <span className='text-left text-4xl self-start'>Noal Balint: Technologieverstärker</span>
-            <span className='text-left text-2xl self-start pb-4'>Application to Velofood</span>
+            <span className='text-left text-4xl self-start pb-1'>Noal Balint: Technologieverstärker</span>
+            <span className='text-left text-2xl self-start pb-6'>Application to Velofood</span>
             <Paragraph>I am a frontend designer-developer with over 4 years of professional professional experience building an enterprise-grade monolithic single-page dynamic web app.</Paragraph>
             <Paragraph>
               The Velofood "Verstärkung in der Technik" job posting was forwarded to me through a friend,
@@ -101,7 +141,7 @@ export default function Velofood(): React.ReactElement {
             </Paragraph>
           </VerticalSectionRight>
         </HorizontalSection>
-        <HorizontalSection className='content-center'>
+        <HorizontalSection className='justify-center'>
           <Line /> <span> Summary of Professional Experience </span> <Line />
         </HorizontalSection>
         {/* Professional Experience Timeline */}
@@ -114,17 +154,15 @@ export default function Velofood(): React.ReactElement {
               const lastCircle = document.querySelector('#last-circle');
               console.log(lastCircle.getBoundingClientRect().top - firstCircle.getBoundingClientRect().top);
              */}
-            <DrawLine distanceToScroll={804} className='mr-2 mt-1' />
-            <Circle id='first-circle' />
-            <Circle style={{ marginTop: '1.75rem' }} />
-            <Circle style={{ marginTop: '4.75rem' }} />
-            <Circle style={{ marginTop: '11.5rem' }} />
-            <Circle style={{ marginTop: '9.75rem' }} />
-            <Circle style={{ marginTop: '4.75rem' }} />
-            <Circle style={{ marginTop: '9.75rem' }} id='last-circle' />
+            <DrawLine distanceToScroll={752} className='ml-12 mt-1' />
+            <Circle id='first-circle' className='ml-14' />
+            <TimelineDate year='2019' style={{ marginTop: '4.5rem' }} />
+            <TimelineDate year='2021' style={{ marginTop: '11.25rem' }} />
+            <TimelineDate year='2022' style={{ marginTop: '9.5rem' }} />
+            <TimelineDate year='2023' style={{ marginTop: '4.5rem' }} />
+            <TimelineDate year='2023' style={{ marginTop: '9rem' }} id='last-circle' />
           </VerticalSectionLeft>
           <VerticalSectionRight className='items-start self-start'>
-            <span className='font-medium'>Born in Vancouver, Canada</span>
             <TimelineItem
               title="Early Career"
               subtexts={[
@@ -152,7 +190,7 @@ export default function Velofood(): React.ReactElement {
               ]}
             />
             <TimelineItem
-              title="Acquired by New York-based conglomerate 'Flashpoint.io'"
+              title="Acquired by Flashpoint.io"
               subtexts={[
                 "Transition from 40-person to 400-person organization",
                 "More heirachy, more meetings, less 'personal touch'",
@@ -176,6 +214,9 @@ export default function Velofood(): React.ReactElement {
               ]}
             />
           </VerticalSectionRight>
+        </HorizontalSection>
+        <HorizontalSection className='justify-center'>
+          <Line /> <span> Technologies </span> <Line />
         </HorizontalSection>
         <HorizontalSection>
           <Paragraph>
