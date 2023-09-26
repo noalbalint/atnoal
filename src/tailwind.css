@@ -675,6 +675,10 @@ video {
   height: 4rem;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .w-56 {
   width: 14rem;
 }
@@ -697,6 +701,38 @@ video {
 
 .w-52 {
   width: 13rem;
+}
+
+.w-72 {
+  width: 18rem;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.w-20 {
+  width: 5rem;
+}
+
+.w-9\/12 {
+  width: 75%;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-row {
@@ -756,6 +792,16 @@ video {
 .px-24 {
   padding-left: 6rem;
   padding-right: 6rem;
+}
+
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .pb-10 {
@@ -862,6 +908,14 @@ video {
 
 .font-medium {
   font-weight: 500;
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 :root {

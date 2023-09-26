@@ -2,7 +2,7 @@ import React from 'react'
 import noal from '@/assets/noal.jpg'
 import styled from 'styled-components';
 import DrawLine from '../components/DrawLine'
-import LogoCarousel from '../components/LogoCarousel';
+import LogoSection from '../components/LogoSection';
 
 const HorizontalSection = styled.div`
   width: 66%;
@@ -13,7 +13,7 @@ const HorizontalSection = styled.div`
   background-color: #F8FAFC;
 `;
 
-const VerticalSectionLeft = styled.div`
+const VerticalSectionLeftThird = styled.div`
   width: 33%;
   align-self: start;
   display: flex;
@@ -22,12 +22,31 @@ const VerticalSectionLeft = styled.div`
   padding: 1.5rem;
 `;
 
-const VerticalSectionRight = styled.div`
+const VerticalSectionRightTwoThird = styled.div`
   width: 66%;
   align-self: start;
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
+  padding-right: 4rem;
+`;
+
+const VerticalSectionLeftQuarter = styled.div`
+  width: 25%;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+`;
+
+const VerticalSectionRightThreeQuarter = styled.div`
+  width: 75%;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  padding-right: 4rem;
 `;
 
 const Paragraph = styled.p`
@@ -64,7 +83,18 @@ const OutlinedCircle = styled.div`
 const Line = styled.hr`
   margin-left: 30px;
   margin-right: 30px;
-  width: 300px;
+`;
+
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 300;
+
+  ::selection {
+    background-color: #01AD4C;
+    color: #fff;
+  }
 `;
 
 function TimelineItem(
@@ -96,9 +126,9 @@ function TimelineDate(
 export default function Velofood(): React.ReactElement {
   return (
     <>
-      <div className='flex flex-col items-center font-light'>
+      <MainContainer>
         <HorizontalSection className='mt-8 pt-8'>
-          <VerticalSectionLeft>
+          <VerticalSectionLeftThird>
             {/* Photo */}
             <img src={noal} className='mb-6 mx-5 rounded-lg w-56' alt="the applicant" />
             {/* Phone */}
@@ -108,6 +138,10 @@ export default function Velofood(): React.ReactElement {
             {/* Email */}
             <div className="inline-flex w-full pb-2">
               <span className='w-full'>noalbalint@gmail.com</span>
+            </div>
+            {/* Linkedin */}
+            <div className="inline-flex w-full pb-2">
+              <a href='https://www.linkedin.com/in/noal-balint-91083510b/' style={{ color: '#01AD4C' }} className='w-full'>linkedin.com/noalbalint</a>
             </div>
             {/* Languages */}
             <div className='flex items-center justify-between pt-2 w-48'>
@@ -130,11 +164,12 @@ export default function Velofood(): React.ReactElement {
                 <Circle className='mr-1' />
               </div>
             </div>
-          </VerticalSectionLeft>
-          <VerticalSectionRight className='items-center pt-0'>
-            <span className='text-left text-4xl self-start pb-1'>Noal Balint: Technologieverstärker</span>
-            <span className='text-left text-2xl self-start pb-6'>Application to Velofood</span>
-            <Paragraph>I am a frontend designer-developer with over 4 years of professional professional experience building an enterprise-grade monolithic single-page dynamic web app.</Paragraph>
+          </VerticalSectionLeftThird>
+          <VerticalSectionRightTwoThird className='items-center pt-0'>
+            <span className='text-left text-4xl self-start pb-1'>NOAL BALINT</span>
+            <span className='text-left text-4xl self-start pb-1'>Eure Verstärkung in der Technik</span>
+            <i className='text-left text-2xl self-start pb-6'>Application to Velofood</i>
+            <Paragraph>I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade monolithic single-page dynamic web apps.</Paragraph>
             <Paragraph>
               The Velofood "Verstärkung in der Technik" job posting was forwarded to me through a friend,
               and believe it would be perfect fit for my background and interests.
@@ -144,14 +179,24 @@ export default function Velofood(): React.ReactElement {
               combines cycling with technology is very appealing to me. I also appreciate that you offer a flexible work schedule, as I would love
               to finally experience the 20-hour week.
             </Paragraph>
-          </VerticalSectionRight>
+          </VerticalSectionRightTwoThird>
         </HorizontalSection>
+        {/* Technologies logos */}
         <HorizontalSection className='justify-center'>
-          <Line /> <span> Summary of Professional Experience </span> <Line />
+          <div className='flex flex-col w-full'>
+            <div className='pb-8'>
+              <LogoSection />
+            </div>
+          </div>
+        </HorizontalSection>
+        <HorizontalSection className='justify-center pb-8'>
+          <Line className='w-72' />
+          <span> Summary of Professional Experience </span>
+          <Line className='w-72' />
         </HorizontalSection>
         {/* Professional Experience Timeline */}
         <HorizontalSection>
-          <VerticalSectionLeft>
+          <VerticalSectionLeftQuarter>
             {/*
               To recalculate the distanceToScroll after making changes, run this in the browser console:
 
@@ -166,13 +211,13 @@ export default function Velofood(): React.ReactElement {
             <TimelineDate year='2022' style={{ marginTop: '9.5rem' }} />
             <TimelineDate year='2023' style={{ marginTop: '4.5rem' }} />
             <TimelineDate year='2023' style={{ marginTop: '9rem' }} id='last-circle' />
-          </VerticalSectionLeft>
-          <VerticalSectionRight className='items-start self-start'>
+          </VerticalSectionLeftQuarter>
+          <VerticalSectionRightThreeQuarter className='items-start self-start'>
             <TimelineItem
               title="Early Career"
               subtexts={[
-                "Develop soft-skill through various roles in restaurants, surf shops, and film sets",
-                "Communication, humility, task prioritization, and attention to detail"
+                "Various customer-facing roles in restaurants, surf shops, and film sets",
+                "Develop communication, humility, task prioritization, and attention to detail"
               ]}
             />
             <TimelineItem
@@ -218,22 +263,9 @@ export default function Velofood(): React.ReactElement {
                 "Do a really good job and make everybody happy :)"
               ]}
             />
-          </VerticalSectionRight>
+          </VerticalSectionRightThreeQuarter>
         </HorizontalSection>
-        <HorizontalSection className='justify-center'>
-          <div className='flex flex-col'>
-            <div className='flex mb-8'>
-              <Line /> <span className='px-24'> Technologies </span> <Line />
-            </div>
-            <LogoCarousel />
-          </div>
-        </HorizontalSection>
-        <HorizontalSection>
-          <Paragraph>
-            This site exists solely to apply to Velofood. Though my main frontend framework is Vue, I chose to build this site with React to demonstrate my ability to learn new technologies.
-          </Paragraph>
-        </HorizontalSection>
-      </div>
+      </MainContainer>
     </>
   )
 }
