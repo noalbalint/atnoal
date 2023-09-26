@@ -102,7 +102,7 @@ function TimelineItem(
 ): React.ReactElement {
   return (
     <div className='mb-4'>
-      <p className='font-medium text-left'>{title}</p>
+      <b className='font-medium text-left'>{title}</b>
       <ul>
         {subtexts.map((subtext) => (
           <li className='pl-2 text-left'>- {subtext}</li>
@@ -223,12 +223,50 @@ export default function Velofood(): React.ReactElement {
             <TimelineItem
               title="Intern at Echosec Systems"
               subtexts={[
-                "Why is nobody asking me to implement a linked-list in C++ or convert an RGB to a hex code by hand? University didn't prepare me for this at all!",
                 "Shadow senior developers to learn the basic technologies of web development",
                 "Complete small bugs tickets and features with considerable guidance",
-                "Learn the 'gestalt' of good programming: pull request etiquette, avoiding bikeshedding, code documentation, naming, and structure, etcetera",
+                "Learn the 'gestalt' of good programming: pull request etiquette, avoiding bikeshedding, code documentation, naming, structure, etc.",
               ]}
             />
+            {/*
+              "TODO: use STAR method and add some kind of metrics",
+
+              reframe to 'active voice'; 'complete small bug tickets' to 'managed a bug backlog of frontend bugs'
+
+              everything should tell the reader about a skill that you have
+
+              more specifics about the technologies you used
+
+              'learn' -> 'adhere'
+
+              check github for some imperical data
+
+              'Work semi-independently on mentored projects' -> 'Use pair-programming to complete mid-size projects'
+
+              shadow -> pair programming
+
+              comfortbale in scaling organization
+
+              talk about 'agile'
+
+              people don't know what swe stands for -> do junior, intermediate, senior
+
+              comfortable managing a large codebase
+
+              resume is just like your 'grades' - cover letter and interview is where you get to show your personality
+
+              talk about types of projects that you worked on; dates that you worked places
+
+              try to figure out how much
+
+              think about a project that went well that demostrates proficiency in the desired skills
+
+              what did I specifically redesign?
+
+              how many customers were convinced by the actor profile thing?
+
+              velocity
+            */}
             <TimelineItem
               title="SWE I at Echosec Systems"
               subtexts={[
@@ -236,20 +274,13 @@ export default function Velofood(): React.ReactElement {
                 "Make meaningful contributions in the code review process.",
                 "Ownership of small bugs tickets and features with some guidance from mentors",
                 "Developing high-level understanding of the company/codebase as a whole",
-                "Transition to fully-remote work due to COVID-19",
-              ]}
-            />
-            <TimelineItem
-              title="Acquired by Flashpoint.io"
-              subtexts={[
-                "Transition from 40-person to 400-person organization",
-                "More heirachy, more meetings, less 'personal touch'",
+                "Increase time to first contentful paint by 200% through preloading and code splitting",
               ]}
             />
             <TimelineItem
               title="SWE II at Echosec Systems"
               subtexts={[
-                "Core member of the team. Major contributor for large product initiatives",
+                "Take more responsibility and ownership of codebase and projects",
                 "Ownership of many mid-sized features with minimal or no guidance",
                 "Translate business requirements into Figma mockups and JIRA tickets",
                 "Participate in customer calls and demos as a technical expert",
