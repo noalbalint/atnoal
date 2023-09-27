@@ -1,6 +1,8 @@
-personal website; noalbalint.com
+noalbalint.com - personal website
 
-made with vite react-ts template
+the only route currently active it `/vellofood?hire="true"`. The query param has no effect but I thought it was a nice touch for the application :)
+
+-----
 
 for local development:
 
@@ -10,5 +12,8 @@ for local development:
 to deploy:
 
 `$ npm run build`
+
 `$ firebase serve` to test the production built
+
 `$ firebase deploy` to deploy to noalbalint.com
+
