@@ -175,15 +175,15 @@ export default function Velofood(): React.ReactElement {
             <span className='text-left text-4xl self-start pb-1'>Eure Verstärkung in der Technik</span>
             <i className='text-left text-2xl self-start pb-6'>Application to Velofood</i>
             <Paragraph>
-              Your "Verstärkung in der Technik" job posting was forwarded to me through a friend, and I
-              believe it would be perfect fit for my background and interests.
+              I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps using HTML, CSS, PHP,
+              and JavaScript. I believe it that my background and experience would be an excellent fit for your open "Verstärkung in der Technik" position.
             </Paragraph>
-            <Paragraph>I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps.</Paragraph>
             <Paragraph>
               Outside of work I love to ride bikes, and most Wednesdays you can find me turning a wrench at Maghanoy bei Keplerbrücke.
             </Paragraph>
             <Paragraph>
-              I really like the way Velofood combines cycling with technology, and I would be very motivated to join your team.
+              Velofood seems like a company with a heart, genuinely trying to make the world a better place. The combination of cycling, technology,
+              social welfare and sustainability is a perfect nexus for me, I am extremely motivated to join your team!
             </Paragraph>
           </VerticalSectionRightTwoThird>
         </HorizontalSection>
@@ -262,14 +262,14 @@ export default function Velofood(): React.ReactElement {
           </div>
         </HorizontalSection>
         <HorizontalSection className='mb-8 pt-16 px-32 flex flex-col'>
-          <Paragraph>
-            During my time at Echosec, we were acquired twice an scaled from 12 people to more than 500. I am really looking forward to work in a smaller
+          <Paragraph style={{ textAlign: 'center' }}>
+            During my time at Echosec, we were acquired twice an scaled from an organization of 12 people to more than 500. I am excited to work in a smaller
             company again, where I can have a greater impact on the product and the company culture.
           </Paragraph>
-          <Paragraph>
-            I would be available to begin work in approximately 30 days, and I would ideally like to start at 24 hours per week.
+          <Paragraph style={{ textAlign: 'center' }}>
+            I would be available to begin work in approximately 30 days, and I would like to start at 24 hours per week.
           </Paragraph>
-          <Paragraph style={{ textAlign: 'center' }} className='py-4'>
+          <Paragraph style={{ textAlign: 'center' }} className='px-16'>
             This site was built in 3 days entirely for the purpose of this application. I hope you like it!
           </Paragraph>
         </HorizontalSection>
