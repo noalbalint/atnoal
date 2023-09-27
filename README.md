@@ -5,7 +5,7 @@ The only route currently active is `noalbalint.com/vellofood?hire=true`. The que
 
 -----
 
-The app was created using Vite, and leverages React, Styled Components, Tailwind, and Firebase Hosting.
+The app was created using Vite and leverages React, Styled Components, Tailwind, and Firebase Hosting.
 
 -----
 
