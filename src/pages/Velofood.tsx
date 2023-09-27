@@ -29,24 +29,6 @@ const VerticalSectionRightTwoThird = styled.div`
   padding-right: 4rem;
 `;
 
-const VerticalSectionLeftQuarter = styled.div`
-  width: 25%;
-  align-self: start;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5rem;
-`;
-
-const VerticalSectionRightThreeQuarter = styled.div`
-  width: 75%;
-  align-self: start;
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-  padding-right: 4rem;
-`;
-
 const Paragraph = styled.p`
   width: 100%;
   text-align: left;
