@@ -5,7 +5,7 @@ import DrawLine from '../components/DrawLine'
 import LogoSection from '../components/LogoSection';
 
 const HorizontalSection = styled.div`
-  width: 66%;
+  width: 70%;
   display: flex;
   align-items: center;
   background-color: #F8FAFC;
@@ -109,6 +109,17 @@ function TimelineDate(
 }
 
 export default function Velofood(): React.ReactElement {
+  if (window.innerWidth < 1000) {
+    return (
+      <>
+        <div className='flex flex-col justify-center'>
+          <p>Sorry, mobile not supported.</p>
+          <p className='pt-4'>Please try again on a larger screen :)</p>
+        </div>
+      </>
+    )
+  }
+
   return (
     <>
       <MainContainer>
@@ -125,8 +136,12 @@ export default function Velofood(): React.ReactElement {
               <span className='w-full'>noalbalint@gmail.com</span>
             </div>
             {/* Linkedin */}
-            <div className="inline-flex w-full pb-2">
+            <div className="inline-flex pb-2">
               <a href='https://www.linkedin.com/in/noal-balint-91083510b/' style={{ color: '#01AD4C' }} className='w-full'>linkedin.com/noalbalint</a>
+            </div>
+            {/* Github */}
+            <div className="inline-flex pb-2">
+              <a href='https://github.com/noalbalint/atnoal' style={{ color: '#01AD4C' }} className='w-full'> {'<'}  view source code {'>'} </a>
             </div>
             {/* Languages */}
             <div className='flex items-center justify-between pt-2 w-48'>
@@ -168,15 +183,15 @@ export default function Velofood(): React.ReactElement {
             </Paragraph>
             <Paragraph>
               Velofood seems like a company with a heart, genuinely trying to make the world a better place. The combination of cycling, technology,
-              social welfare and sustainability is a perfect nexus for me, I am extremely motivated to join your team!
+              social welfare and sustainability is a perfect nexus for me, and I am extremely motivated to join your team!
             </Paragraph>
           </VerticalSectionRightTwoThird>
         </HorizontalSection>
 
         {/* Technology logos */}
-        <HorizontalSection className='justify-center pt-8 px-16'>
+        <HorizontalSection className='justify-center pt-8 px-32'>
           <div className='flex flex-col w-full'>
-            <div className='pb-8 px-16'>
+            <div className='pb-8'>
               <LogoSection />
             </div>
           </div>
@@ -190,7 +205,7 @@ export default function Velofood(): React.ReactElement {
         </HorizontalSection>
 
         {/* Professional Experience Timeline */}
-        <HorizontalSection className=' pl-32 pr-16'>
+        <HorizontalSection className=' pl-32 pr-16 justify-center'>
           <div className='flex flex-col'>
             {/*
               To recalculate the distanceToScroll after making changes, run this in the browser console:
@@ -247,15 +262,12 @@ export default function Velofood(): React.ReactElement {
           </div>
         </HorizontalSection>
         <HorizontalSection className='mb-8 pt-16 px-32 flex flex-col'>
-          <Paragraph style={{ textAlign: 'center' }}>
-            During my time at Echosec, we were acquired twice an scaled from an organization of 12 people to more than 500. I am excited to work in a smaller
+          <Paragraph>
+            During my time at Echosec, we were acquired twice an scaled from an organization of 12 people to more than 500. I am looking forward to working in a smaller
             company again, where I can have a greater impact on the product and the company culture.
           </Paragraph>
-          <Paragraph style={{ textAlign: 'center' }}>
+          <Paragraph className='pb-12'>
             I would be available to begin work in approximately 30 days, and I would like to start at 24 hours per week.
-          </Paragraph>
-          <Paragraph style={{ textAlign: 'center' }} className='px-16'>
-            This site was built in 3 days entirely for the purpose of this application. I hope you like it!
           </Paragraph>
         </HorizontalSection>
       </MainContainer>

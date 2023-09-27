@@ -803,6 +803,10 @@ video {
   padding-left: 10rem;
 }
 
+.pt-64 {
+  padding-top: 16rem;
+}
+
 .text-left {
   text-align: left;
 }
