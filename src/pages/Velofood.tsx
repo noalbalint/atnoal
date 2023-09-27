@@ -203,7 +203,7 @@ export default function Velofood(): React.ReactElement {
             <i className='text-left text-2xl self-start pb-6'>Application to Velofood</i>
             <Paragraph>
               I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps using HTML, CSS, PHP,
-              Ajax, and JavaScript. I believe it that my background would be an excellent fit for your open "Verstärkung in der Technik" position.
+              Ajax, and JavaScript. I believe that my background would be an excellent fit for your open "Verstärkung in der Technik" position.
             </Paragraph>
             <Paragraph>
               Outside of work I love to ride bikes, and most Wednesdays you can find me working at Maghanoy.
