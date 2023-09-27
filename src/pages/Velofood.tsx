@@ -169,15 +169,16 @@ export default function Velofood(): React.ReactElement {
             <span className='text-left text-4xl self-start pb-1'>NOAL BALINT</span>
             <span className='text-left text-4xl self-start pb-1'>Eure Verstärkung in der Technik</span>
             <i className='text-left text-2xl self-start pb-6'>Application to Velofood</i>
-            <Paragraph>I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade monolithic single-page dynamic web apps.</Paragraph>
             <Paragraph>
-              The Velofood "Verstärkung in der Technik" job posting was forwarded to me through a friend,
-              and believe it would be perfect fit for my background and interests.
+              Your "Verstärkung in der Technik" job posting was forwarded to me through a friend, and I
+              believe it would be perfect fit for my background and interests.
+            </Paragraph>
+            <Paragraph>I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps.</Paragraph>
+            <Paragraph>
+              Outside of work I love to ride bikes, and most Wednesdays you can find me turning a wrench at Maghanoy bei Keplerbrücke.
             </Paragraph>
             <Paragraph>
-              I love bikes, and most Wednesdays you can find me turning a wrench at Maghanoy. The opportunity to be part of a company that
-              combines cycling with technology is very appealing to me. I also appreciate that you offer a flexible work schedule, as I would love
-              to finally experience the 20-hour week.
+              I really like the way Velofood combines cycling with technology, and I would be very motivated to join your team.
             </Paragraph>
           </VerticalSectionRightTwoThird>
         </HorizontalSection>
