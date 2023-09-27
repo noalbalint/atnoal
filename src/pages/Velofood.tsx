@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import noal from '@/assets/noal.jpg'
 import styled from 'styled-components';
 import DrawLine from '../components/DrawLine'
@@ -108,7 +108,25 @@ function TimelineDate(
   )
 }
 
+// Main Page View
 export default function Velofood(): React.ReactElement {
+  const [drawLineLength, setdrawLineLength] = useState<number | null>(null);
+
+  useEffect(() => {
+    console.log('compute line length');
+    const firstCircle = document.querySelector('#first-circle');
+    if (!firstCircle) {
+      return;
+    }
+    const lastCircle = document.querySelector('#last-circle');
+    if (!lastCircle) {
+      return;
+    }
+
+    setdrawLineLength(lastCircle?.getBoundingClientRect().top - firstCircle.getBoundingClientRect().top);
+  }, []);
+
+  // Mobile fallback
   if (window.innerWidth < 1000) {
     return (
       <>
@@ -214,7 +232,9 @@ export default function Velofood(): React.ReactElement {
               const lastCircle = document.querySelector('#last-circle');
               console.log(lastCircle.getBoundingClientRect().top - firstCircle.getBoundingClientRect().top);
              */}
-            <DrawLine distanceToScroll={550} marginLeft='62px' />
+            {drawLineLength > 0 && (
+              <DrawLine distanceToScroll={drawLineLength} marginLeft='62px' />
+            )}
             <TimelineItem
               circleSlot={<Circle id='first-circle' className='ml-14' />}
               title="Early Career"
