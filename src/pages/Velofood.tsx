@@ -158,7 +158,7 @@ export default function Velofood(): React.ReactElement {
             {/* Photo */}
             <img src={noal} className='mb-6 mx-5 rounded-lg w-56' alt="the applicant" />
             {/* Phone */}
-            <div className="inline-flex w-full pb-2">
+            <div className="inline-flex w-full pb-2 pt-1">
               <span className='w-full'>+43 699 819 483 46</span>
             </div>
             {/* Email */}
@@ -174,7 +174,7 @@ export default function Velofood(): React.ReactElement {
               <a href='https://github.com/noalbalint/atnoal' style={{ color: '#01AD4C' }} className='w-full'> {'<'}  view source code {'>'} </a>
             </div>
             {/* Languages */}
-            <div className='flex items-center justify-between pt-2 w-48'>
+            <div className='flex flex-row w-full justify-between px-20 items-center pt-4'>
               <span style={{ marginRight: '45px' }}>German</span>
               <div className='flex'>
                 <Circle className='mr-1' />
@@ -184,7 +184,7 @@ export default function Velofood(): React.ReactElement {
                 <OutlinedCircle className='mr-1' />
               </div>
             </div>
-            <div className='flex items-center justify-between pt-2 w-48'>
+            <div className='flex flex-row w-full justify-between px-20 items-center pt-2'>
               <span style={{ marginRight: '51px' }}>English</span>
               <div className='flex'>
                 <Circle className='mr-1' />
