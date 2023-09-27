@@ -278,7 +278,7 @@ export default function Velofood(): React.ReactElement {
             {/* TODO: it would be cool if when the line hit this point, it would turn another color and make a confetti or something */}
             <TimelineItem
               circleSlot={<TimelineDate id='last-circle' year='2023' />}
-              title="Velofood - Intermediate Frontend Developer (?!)"
+              title="Velofood - Intermediate Frontend Developer (?)"
               subtexts={[
                 "Apply skills from previous roles to a new codebase and problem domain",
                 "Do a really good job and make everybody happy :)"
@@ -286,10 +286,11 @@ export default function Velofood(): React.ReactElement {
             />
           </div>
         </HorizontalSection>
-        <HorizontalSection className='mb-8 pt-16 px-32 flex flex-col'>
+        <HorizontalSection className='mb-8 pt-8 px-32 flex flex-col'>
+          <hr className='py-6 w-10/12'/>
           <Paragraph>
             During my time at Echosec, we were acquired twice an scaled from an organization of 12 people to more than 500. I am looking forward to working in a smaller
-            company again, where I can have a greater impact on the product and the company culture.
+            company again, where I can have a greater impact on the product and culture.
           </Paragraph>
           <Paragraph className='pb-12'>
             I would be available to begin work in approximately 30 days, and I would like to start at 24 hours per week.
