@@ -3,6 +3,7 @@ import noal from '@/assets/noal.jpg'
 import styled from 'styled-components';
 import DrawLine from '../components/DrawLine'
 import LogoSection from '../components/LogoSection';
+import BlockQuote from '../components/BlockQuote';
 
 const HorizontalSection = styled.div`
   width: 1300px;
@@ -167,11 +168,25 @@ export default function Velofood(): React.ReactElement {
             </div>
             {/* Linkedin */}
             <div className="inline-flex pb-2">
-              <a href='https://www.linkedin.com/in/noal-balint-91083510b/' style={{ color: '#01AD4C' }} className='w-full'>linkedin.com/noalbalint</a>
+              <a
+                href='https://www.linkedin.com/in/noal-balint-91083510b/'
+                target='_blank'
+                style={{ color: '#01AD4C' }}
+                className='w-full font-medium'
+              >
+                linkedin.com/noalbalint
+              </a>
             </div>
             {/* Github */}
             <div className="inline-flex pb-2">
-              <a href='https://github.com/noalbalint/atnoal' style={{ color: '#01AD4C' }} className='w-full'> {'<'}  view source code {'>'} </a>
+              <a
+                href='https://github.com/noalbalint/atnoal'
+                target='_blank'
+                style={{ color: '#01AD4C' }}
+                className='w-full font-medium'
+              >
+                {'<'}  view source code {'>'}
+              </a>
             </div>
             {/* Languages */}
             <div className='flex flex-row w-full justify-between px-20 items-center pt-4'>
@@ -287,15 +302,29 @@ export default function Velofood(): React.ReactElement {
           </div>
         </HorizontalSection>
 
-        {/* Footer */}
-        <HorizontalSection className='mb-8 pt-8 px-32 flex flex-col'>
-          <hr className='py-6 w-10/12'/>
+        {/* Line */}
+        <HorizontalSection className='py-6 flex flex-col'>
+          <hr className='w-9/12' />
+        </HorizontalSection>
+
+        {/* Reference from Joan */}
+        <HorizontalSection className='flex flex-col'>
+          <BlockQuote className='w-full h-72' />
+        </HorizontalSection>
+
+        {/* Line */}
+        <HorizontalSection className='py-6 flex flex-col'>
+          <hr className='w-9/12' />
+        </HorizontalSection>
+
+        {/* Outro */}
+        <HorizontalSection className='mb-8 pt-8 px-36 flex flex-col'>
           <Paragraph>
             During my time at Echosec, we were acquired twice and scaled from an organization of 12 people to more than 500. I am looking forward to working in a smaller
             company again, where I can have a greater impact on the product and culture.
           </Paragraph>
           <Paragraph className='pb-12'>
-            I would be available to begin work in approximately 30 days, and I would like to start at 24 hours per week.
+            I would be available to begin work in approximately 30 days, and I would ideally like to start at 24 hours per week. <br /> Thanks for reading!
           </Paragraph>
         </HorizontalSection>
       </MainContainer>
