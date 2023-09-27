@@ -5,7 +5,7 @@ import DrawLine from '../components/DrawLine'
 import LogoSection from '../components/LogoSection';
 
 const HorizontalSection = styled.div`
-  width: 70%;
+  width: 1300px;
   display: flex;
   align-items: center;
   background-color: #F8FAFC;
@@ -245,7 +245,7 @@ export default function Velofood(): React.ReactElement {
               title="Early Career"
               subtexts={[
                 "Various customer-facing roles in restaurants, surf shops, and film sets",
-                "Develop soft skills: communication, humility, task prioritization, and attention to detail"
+                "Develop soft skills such as communication, humility, task prioritization, and attention to detail"
               ]}
             />
             <TimelineItem
@@ -269,9 +269,9 @@ export default function Velofood(): React.ReactElement {
               circleSlot={<TimelineDate year='2022' />}
               title="Echosec Systems - Intermediate Frontend Developer"
               subtexts={[
-                "Lead multiple major fullstack features, tranlating product requirements into Figma mockups and API schema",
+                "Lead multiple fullstack features, translating product requirements into Figma mockups and API schema, then implementing alongside interdisciplenary team members implement, and communicate status updates to stakeholders",
                 "Core contributor of world-class digital threat intelligence product, recently acquired for +$100M",
-                "Rise to #3 code contributor, after CTO and principle engineer",
+                "Become #3 overall code contributor, after CTO and principle engineer (8+ years at company)",
                 "Participate in customer calls and demos as a technical expert",
               ]}
             />
