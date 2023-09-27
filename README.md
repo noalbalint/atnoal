@@ -12,9 +12,11 @@ The app was created using Vite and leverages React, Styled Components, Tailwind,
 For local development:
 
 Start the tailwind css generator:
+
 `$ npx tailwindcss build -i src/index.css -o src/tailwind.css --watch`
 
 In another terminal, start the vite compiler:
+
 `$ npm run dev`
 
 To deploy:
