@@ -254,23 +254,21 @@ export function Velofood(): React.ReactElement {
         </HorizontalSection>
 
         {/* Technology logos */}
-        <HorizontalSection className='justify-center pt-8 px-32'>
+        <HorizontalSection className='justify-center py-10 px-32'>
           <div className='flex flex-col w-full'>
-            <div className='pb-8'>
-              <LogoSection />
-            </div>
+            <LogoSection />
           </div>
         </HorizontalSection>
 
         {/* Section Header */}
-        <HorizontalSection className='justify-center pt-4 pb-12'>
+        <HorizontalSection className='justify-center pt-8 pb-16'>
           <Line className='w-72' />
-          <span className='w-58'> Summary of Professional Experience </span>
+          <span className='w-58 font-normal'> Summary of Professional Experience </span>
           <Line className='w-72' />
         </HorizontalSection>
 
         {/* Professional Experience Timeline */}
-        <HorizontalSection className=' pl-32 pr-16 justify-center'>
+        <HorizontalSection className=' pl-32 pr-16 pb-10 justify-center'>
           <div className='flex flex-col'>
             {drawLineLength && (
               <DrawLine distanceToScroll={drawLineLength} marginLeft='62px' />
@@ -292,7 +290,7 @@ export function Velofood(): React.ReactElement {
               ]}
             />
             <TimelineItem
-              circleSlot={<TimelineDate year='2021' />}
+              circleSlot={<TimelineDate year='2020' />}
               title="Echosec Systems - Junior Frontend Developer"
               subtexts={[
                 "Ownership of small frontend bugs and features, completed with some guidance from mentors",
@@ -301,12 +299,12 @@ export function Velofood(): React.ReactElement {
               ]}
             />
             <TimelineItem
-              circleSlot={<TimelineDate year='2022' />}
+              circleSlot={<TimelineDate year='2021' />}
               title="Echosec Systems - Intermediate Frontend Developer"
               subtexts={[
-                "Lead multiple fullstack features, translating product requirements into Figma mockups and API schema, then implementing alongside interdisciplenary team members implement, and communicate status updates to stakeholders",
-                "Core contributor of world-class digital threat intelligence product, recently acquired for +$100M",
-                "Become #3 overall code contributor, after CTO and principle engineer (8+ years at company)",
+                "Lead multiple fullstack features: translate product requirements into Figma mockups and API schema, then implement alongside interdisciplenary team members, and communicate status updates to stakeholders",
+                "Core contributor of world-class digital threat intelligence product, acquired for +$100M",
+                "Become #3 overall code contributor, after CTO and principle engineer",
                 "Participate in customer calls and demos as a technical expert",
               ]}
             />
@@ -316,7 +314,7 @@ export function Velofood(): React.ReactElement {
               title="Velofood - Intermediate Frontend Developer (?)"
               subtexts={[
                 "Apply skills from previous roles to a new codebase and problem domain",
-                "Do a really good job and make everybody happy :)"
+                "Do a really good job and make users happy :)"
               ]}
             />
           </div>
@@ -334,20 +332,17 @@ export function Velofood(): React.ReactElement {
 
         {/* Outro */}
         <HorizontalSection className='mb-24 pb-8 px-36 flex flex-col'>
-          <div className='flex py-8'>
+          <div className='flex py-8 font-normal text-xl'>
             <p className='w-fit'>
-              If you have any questions or would like to chat, please
+              If you have any questions or would like to chat,
             </p>
             <Link
-              className='w-fit pl-2'
+              className='w-fit pl-1'
               href="mailto:noalbalint@gmail.com?subject=Re: Velofood Application"
               target='_blank'
             >
-              send me a message!
+              say hello!
             </Link>
-            <p className='w-fit pl-1'>
-              :)
-            </p>
           </div>
         </HorizontalSection>
       </MainContainer>

@@ -25,18 +25,18 @@ const StyledImg = styled.img`
   }
 
   &.hover {
-    transform: scale(1.2);
+    transform: scale(1.4);
     transition: transform 0.3s ease;
   }
 `;
 
 export default function LogoSection(): React.ReactElement {
   useEffect(() => {
-    emphasizeLogoTimeout('javascript', 3600);
-    emphasizeLogoTimeout('html', 3800);
-    emphasizeLogoTimeout('typescript', 4000);
-    emphasizeLogoTimeout('css', 4200);
-    emphasizeLogoTimeout('ajax', 4400);
+    emphasizeLogoTimeout('javascript', 5600);
+    emphasizeLogoTimeout('html', 5800);
+    emphasizeLogoTimeout('typescript', 6000);
+    emphasizeLogoTimeout('css', 6200);
+    emphasizeLogoTimeout('ajax', 6400);
   });
 
   const emphasizeLogoTimeout = async (logoName: string, timeoutMs: number) => {
@@ -53,7 +53,7 @@ export default function LogoSection(): React.ReactElement {
 
     // Make logo 'pop' for 1s
     logo.classList.add('hover');
-    await new Promise(r => setTimeout(r, 2000));
+    await new Promise(r => setTimeout(r, 2700));
     logo.classList.remove('hover');
   };
 
