@@ -64,7 +64,7 @@ export default function LogoSection(): React.ReactElement {
         <StyledImg src={javascriptLogo} />
         <StyledImg src={jestLogo} />
         <StyledImg src={htmlLogo} style={{ width: '3.25rem' }} />
-        <StyledImg src={reactLogo} />
+        <StyledImg src={reactLogo} style={{ width: '3.25rem' }} />
         <StyledImg src={lessLogo} style={{ width: '5.5rem' }} />
         <StyledImg src={phpLogo} style={{ width: '4rem' }} />
         <StyledImg src={typescriptLogo} />
