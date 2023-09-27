@@ -66,6 +66,15 @@ const Line = styled.hr`
   margin-right: 30px;
 `;
 
+const Link = styled.a`
+  color: #01AD4C;
+  font-weight: 500;
+
+  &:hover {
+    color: #01AD4C;
+  }
+`
+
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -87,9 +96,9 @@ function TimelineItem(
         {circleSlot}
         <div className='pl-16'>
           <p className='font-medium text-left pb-2'>{title}</p>
-          <ul>
+          <ul style={{ listStyleType: 'disc' }} className='pl-6'>
             {subtexts.map((subtext) => (
-              <li className='pl-2 text-left pb-1'>- {subtext}</li>
+              <li className='pl-1 text-left pb-1'>{subtext}</li>
             ))}
           </ul>
         </div>
@@ -109,8 +118,7 @@ function TimelineDate(
   )
 }
 
-// Main Page View
-export default function Velofood(): React.ReactElement {
+export function Velofood(): React.ReactElement {
   const [drawLineLength, setdrawLineLength] = useState<number | null>(null);
 
   useEffect(() => {
@@ -154,10 +162,14 @@ export default function Velofood(): React.ReactElement {
   return (
     <>
       <MainContainer>
-        <HorizontalSection className='mt-8 pt-8 px-8'>
+        <HorizontalSection className='mt-16 pt-8 px-8'>
           <VerticalSectionLeftThird>
             {/* Photo */}
-            <img src={noal} className='mb-6 mx-5 rounded-lg w-56' alt="the applicant" />
+            <img
+              src={noal}
+              className='mb-6 mx-5 rounded-lg w-56'
+              alt="the applicant"
+            />
             {/* Phone */}
             <div className="inline-flex w-full pb-2 pt-1">
               <span className='w-full'>+43 699 819 483 46</span>
@@ -168,25 +180,21 @@ export default function Velofood(): React.ReactElement {
             </div>
             {/* Linkedin */}
             <div className="inline-flex pb-2">
-              <a
+              <Link
                 href='https://www.linkedin.com/in/noal-balint-91083510b/'
                 target='_blank'
-                style={{ color: '#01AD4C' }}
-                className='w-full font-medium'
               >
                 linkedin.com/noalbalint
-              </a>
+              </Link>
             </div>
             {/* Github */}
             <div className="inline-flex pb-2">
-              <a
+              <Link
                 href='https://github.com/noalbalint/atnoal'
                 target='_blank'
-                style={{ color: '#01AD4C' }}
-                className='w-full font-medium'
               >
                 {'<'}  view source code {'>'}
-              </a>
+              </Link>
             </div>
             {/* Languages */}
             <div className='flex flex-row w-full justify-between px-20 items-center pt-4'>
@@ -213,9 +221,21 @@ export default function Velofood(): React.ReactElement {
 
           {/* Cover Letter */}
           <VerticalSectionRightTwoThird className='items-center pt-0'>
-            <span className='text-left text-4xl self-start pb-1'>NOAL BALINT</span>
-            <span className='text-left text-4xl self-start pb-1'>Eure Verstärkung in der Technik</span>
-            <i className='text-left text-2xl self-start pb-6'>Application to Velofood</i>
+            <span
+              className='text-left text-4xl self-start pb-1'
+            >
+              NOAL BALINT
+            </span>
+            <span
+              className='text-left text-4xl self-start pb-1'
+            >
+              Eure Verstärkung in der Technik
+            </span>
+            <i
+              className='text-left text-2xl self-start pb-6'
+            >
+              Application to Velofood
+            </i>
             <Paragraph>
               I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps using HTML, CSS, PHP,
               Ajax, and JavaScript. I believe that my background would be an excellent fit for your open "Verstärkung in der Technik" position.
@@ -245,7 +265,7 @@ export default function Velofood(): React.ReactElement {
         {/* Section Header */}
         <HorizontalSection className='justify-center pt-4 pb-12'>
           <Line className='w-72' />
-          <span> Summary of Professional Experience </span>
+          <span className='w-58'> Summary of Professional Experience </span>
           <Line className='w-72' />
         </HorizontalSection>
 
@@ -260,7 +280,7 @@ export default function Velofood(): React.ReactElement {
               title="Early Career"
               subtexts={[
                 "Various customer-facing roles in restaurants, surf shops, and film sets",
-                "Develop soft skills such as communication, humility, task prioritization, and attention to detail"
+                "Develop soft skills such as communication, task prioritization, conflict resolution, and attention to detail"
               ]}
             />
             <TimelineItem
@@ -302,11 +322,6 @@ export default function Velofood(): React.ReactElement {
           </div>
         </HorizontalSection>
 
-        {/* Line */}
-        <HorizontalSection className='py-6 flex flex-col'>
-          <hr className='w-9/12' />
-        </HorizontalSection>
-
         {/* Reference from Joan */}
         <HorizontalSection className='flex flex-col'>
           <BlockQuote className='w-full h-72' />
@@ -318,16 +333,26 @@ export default function Velofood(): React.ReactElement {
         </HorizontalSection>
 
         {/* Outro */}
-        <HorizontalSection className='mb-8 pt-8 px-36 flex flex-col'>
-          <Paragraph>
-            During my time at Echosec, we were acquired twice and scaled from an organization of 12 people to more than 500. I am looking forward to working in a smaller
-            company again, where I can have a greater impact on the product and culture.
-          </Paragraph>
-          <Paragraph className='pb-12'>
-            I would be available to begin work in approximately 30 days, and I would ideally like to start at 24 hours per week. <br /> Thanks for reading!
-          </Paragraph>
+        <HorizontalSection className='mb-24 pb-8 px-36 flex flex-col'>
+          <div className='flex py-8'>
+            <p className='w-fit'>
+              If you have any questions or would like to chat, please
+            </p>
+            <Link
+              className='w-fit pl-2'
+              href="mailto:noalbalint@gmail.com?subject=Re: Velofood Application"
+              target='_blank'
+            >
+              send me a message!
+            </Link>
+            <p className='w-fit pl-1'>
+              :)
+            </p>
+          </div>
         </HorizontalSection>
       </MainContainer>
     </>
   )
 }
+
+export default Velofood;
