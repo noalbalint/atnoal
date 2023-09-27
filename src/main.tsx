@@ -24,12 +24,14 @@ const router = createBrowserRouter([
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <AnimatedCursor
-      innerSize={10}
-      outerSize={10}
-      color='1, 173, 76'
-    />
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+  <>
+    <React.StrictMode />
+      <AnimatedCursor
+        innerSize={10}
+        outerSize={10}
+        color='1, 173, 76'
+      />
+      <RouterProvider router={router} />
+    <React.StrictMode />
+  </>,
 )

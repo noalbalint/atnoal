@@ -181,10 +181,10 @@ export default function Velofood(): React.ReactElement {
             </Paragraph>
           </VerticalSectionRightTwoThird>
         </HorizontalSection>
-        {/* Technologies logos */}
+        {/* Technology logos */}
         <HorizontalSection className='justify-center'>
           <div className='flex flex-col w-full'>
-            <div className='pb-8'>
+            <div className='pb-8 px-16'>
               <LogoSection />
             </div>
           </div>

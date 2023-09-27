@@ -32,40 +32,48 @@ const StyledImg = styled.img`
 
 export default function LogoSection(): React.ReactElement {
   useEffect(() => {
-
-    const logos = document.querySelectorAll('img');
-
-    const randomLogo = async () => {
-      console.log('calling random logo');
-      // Get a random logo
-      const randomIndex = Math.floor(Math.random() * logos.length);
-      console.log(randomIndex);
-      // Make it 'pop' for 1s
-      logos[randomIndex].classList.add('hover');
-      await new Promise(r => setTimeout(r, 1000));
-      logos[randomIndex].classList.remove('hover');
-    };
-
-    setInterval(randomLogo, 10000)
+    emphasizeLogoTimeout('javascript', 3600);
+    emphasizeLogoTimeout('html', 3800);
+    emphasizeLogoTimeout('typescript', 4000);
+    emphasizeLogoTimeout('css', 4200);
+    emphasizeLogoTimeout('ajax', 4400);
   });
 
-return (
-  <>
-    <div className='flex justify-between'>
-      <StyledImg src={javascriptLogo} />
-      <StyledImg src={jestLogo} />
-      <StyledImg src={reactLogo} />
-      <StyledImg src={lessLogo} style={{ width: '5.5rem' }} />
-      <StyledImg src={htmlLogo} style={{ width: '3.25rem' }} />
-      <StyledImg src={phpLogo} style={{ width: '4rem' }} />
-      <StyledImg src={typescriptLogo} />
-      <StyledImg src={cssLogo} style={{ width: '2.25rem' }} />
-      <StyledImg src={ajaxLogo} style={{ width: '5.5rem' }} />
-      <StyledImg src={vueLogo} />
-      <StyledImg src={cypressLogo} />
-      <StyledImg src={figmaLogo} style={{ width: '2.5rem' }} />
-      <StyledImg src={githubLogo} style={{ width: '3.5rem' }} />
-    </div>
-  </>
-)
+  const emphasizeLogoTimeout = async (logoName: string, timeoutMs: number) => {
+    await new Promise(r => setTimeout(r, timeoutMs));
+    emphasizeLogo(logoName);
+  }
+
+  const emphasizeLogo = async (logoName: string) => {
+    const logo = document.querySelector(`img[src*="${logoName}"]`);
+
+    if (!logo) {
+      return;
+    }
+
+    // Make logo 'pop' for 1s
+    logo.classList.add('hover');
+    await new Promise(r => setTimeout(r, 2000));
+    logo.classList.remove('hover');
+  };
+
+  return (
+    <>
+      <div className='flex justify-between'>
+        <StyledImg src={githubLogo} style={{ width: '3.5rem' }} />
+        <StyledImg src={javascriptLogo} />
+        <StyledImg src={jestLogo} />
+        <StyledImg src={htmlLogo} style={{ width: '3.25rem' }} />
+        <StyledImg src={reactLogo} />
+        <StyledImg src={lessLogo} style={{ width: '5.5rem' }} />
+        <StyledImg src={phpLogo} style={{ width: '4rem' }} />
+        <StyledImg src={typescriptLogo} />
+        <StyledImg src={vueLogo} />
+        <StyledImg src={cssLogo} style={{ width: '2.25rem' }} />
+        <StyledImg src={cypressLogo} />
+        <StyledImg src={ajaxLogo} style={{ width: '5.5rem' }} />
+        <StyledImg src={figmaLogo} style={{ width: '2.5rem' }} />
+      </div>
+    </>
+  )
 }
