@@ -286,10 +286,12 @@ export default function Velofood(): React.ReactElement {
             />
           </div>
         </HorizontalSection>
+
+        {/* Footer */}
         <HorizontalSection className='mb-8 pt-8 px-32 flex flex-col'>
           <hr className='py-6 w-10/12'/>
           <Paragraph>
-            During my time at Echosec, we were acquired twice an scaled from an organization of 12 people to more than 500. I am looking forward to working in a smaller
+            During my time at Echosec, we were acquired twice and scaled from an organization of 12 people to more than 500. I am looking forward to working in a smaller
             company again, where I can have a greater impact on the product and culture.
           </Paragraph>
           <Paragraph className='pb-12'>
