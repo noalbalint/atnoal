@@ -113,7 +113,6 @@ export default function Velofood(): React.ReactElement {
   const [drawLineLength, setdrawLineLength] = useState<number | null>(null);
 
   useEffect(() => {
-    console.log('compute line length');
     const firstCircle = document.querySelector('#first-circle');
     if (!firstCircle) {
       return;
@@ -138,6 +137,19 @@ export default function Velofood(): React.ReactElement {
     )
   }
 
+  // XT screen fallback
+  if (window.innerHeight > 1600) {
+    return (
+      <>
+        <div className='flex flex-col justify-center'>
+          <p>Please zoom in a little and reload :)</p>
+          <p className='pt-4'>This pages displays best on laptop-sized screens</p>
+        </div>
+      </>
+    )
+  }
+
+  // Desktop view
   return (
     <>
       <MainContainer>
@@ -225,14 +237,7 @@ export default function Velofood(): React.ReactElement {
         {/* Professional Experience Timeline */}
         <HorizontalSection className=' pl-32 pr-16 justify-center'>
           <div className='flex flex-col'>
-            {/*
-              To recalculate the distanceToScroll after making changes, run this in the browser console:
-
-              const firstCircle = document.querySelector('#first-circle');
-              const lastCircle = document.querySelector('#last-circle');
-              console.log(lastCircle.getBoundingClientRect().top - firstCircle.getBoundingClientRect().top);
-             */}
-            {drawLineLength > 0 && (
+            {drawLineLength && (
               <DrawLine distanceToScroll={drawLineLength} marginLeft='62px' />
             )}
             <TimelineItem
