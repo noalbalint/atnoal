@@ -10,7 +10,5 @@ for local development:
 to deploy:
 
 `$ npm run build`
-`$ firebase deploy`
-
-check https://noalbalint.com/
-
+`$ firebase serve` to test the production built
+`$ firebase deploy` to deploy to noalbalint.com
