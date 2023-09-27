@@ -32,11 +32,11 @@ const StyledImg = styled.img`
 
 export default function LogoSection(): React.ReactElement {
   useEffect(() => {
-    emphasizeLogoTimeout('javascript', 5600);
     emphasizeLogoTimeout('html', 5800);
-    emphasizeLogoTimeout('typescript', 6000);
-    emphasizeLogoTimeout('css', 6200);
-    emphasizeLogoTimeout('ajax', 6400);
+    emphasizeLogoTimeout('css', 6000);
+    emphasizeLogoTimeout('php', 6200);
+    emphasizeLogoTimeout('javascript', 6400);
+    emphasizeLogoTimeout('ajax', 6600);
   });
 
   const emphasizeLogoTimeout = async (logoName: string, timeoutMs: number) => {
@@ -61,15 +61,15 @@ export default function LogoSection(): React.ReactElement {
     <>
       <div className='flex justify-between'>
         <StyledImg src={githubLogo} style={{ width: '3.5rem' }} />
-        <StyledImg src={javascriptLogo} />
         <StyledImg src={jestLogo} />
         <StyledImg src={htmlLogo} style={{ width: '3.25rem' }} />
         <StyledImg src={reactLogo} style={{ width: '3.25rem' }} />
+        <StyledImg src={cssLogo} style={{ width: '2.25rem' }} />
         <StyledImg src={lessLogo} style={{ width: '5.5rem' }} />
         <StyledImg src={phpLogo} style={{ width: '4rem' }} />
         <StyledImg src={typescriptLogo} />
+        <StyledImg src={javascriptLogo} />
         <StyledImg src={vueLogo} />
-        <StyledImg src={cssLogo} style={{ width: '2.25rem' }} />
         <StyledImg src={cypressLogo} />
         <StyledImg src={ajaxLogo} style={{ width: '5.5rem' }} />
         <StyledImg src={figmaLogo} style={{ width: '2.5rem' }} />
