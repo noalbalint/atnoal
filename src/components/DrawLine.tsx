@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // Adapted from https://codepen.io/dmistry485/pen/RqwJJE and heavily modified
 export default function ScrollLine(
-  { distanceToScroll, className }: { distanceToScroll: number, className?: string }
+  { distanceToScroll, marginLeft }: { distanceToScroll: number, marginLeft?: string }
 ): React.ReactElement {
   useEffect(() => {
     // Get a reference to the <path>
@@ -27,21 +27,9 @@ export default function ScrollLine(
       // https://stackoverflow.com/questions/2387136/cross-browser-method-to-determine-vertical-scroll-percentage-in-javascript/2387222#2387222
       const scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 
-      /**
-       * strokeDashoffset controls the hide/show of the path, with 0 being fully shown and distanceToScroll being fully hidden.
-       *
-       * so starting from distanceToScroll, we subtract the distance we've scrolled, multiplied by the scrollPercentage.
-       */
+      // strokeDashoffset controls the hide/show of the path, with 0 being fully shown and distanceToScroll being fully hidden.
+      // so starting from distanceToScroll, we subtract the distance we've scrolled, multiplied by the scrollPercentage.
       path.style.strokeDashoffset = `${distanceToScroll - (distanceToScroll * scrollPercentage)}`;
-
-      // // When complete, remove the dash array, otherwise shape isn't quite sharp
-      // // Accounts for fuzzy math
-      // if (scrollPercentage >= 0.99) {
-      //   path.style.strokeDasharray = "none";
-
-      // } else {
-      //   path.style.strokeDasharray = pathLength + ' ' + pathLength;
-      // }
     });
   }, []);
 
@@ -51,8 +39,9 @@ export default function ScrollLine(
   `;
 
   return (
-    <div className={className}>
+    <div style={{ marginLeft: `${marginLeft}` }}>
       <StyledSVG
+        className='mt-3'
         id='line-svg'
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"

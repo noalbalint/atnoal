@@ -98,16 +98,21 @@ const MainContainer = styled.div`
 `;
 
 function TimelineItem(
-  { title, subtexts }: { title: string, subtexts: string[] }
+  { title, subtexts, circleSlot }: { title: string, subtexts: string[], circleSlot: React.ReactNode }
 ): React.ReactElement {
   return (
     <div className='mb-4'>
-      <b className='font-medium text-left'>{title}</b>
-      <ul>
-        {subtexts.map((subtext) => (
-          <li className='pl-2 text-left'>- {subtext}</li>
-        ))}
-      </ul>
+      <div className='flex items-start'>
+        {circleSlot}
+        <div className='pl-16'>
+          <p className='font-medium text-left'>{title}</p>
+          <ul>
+            {subtexts.map((subtext) => (
+              <li className='pl-2 text-left'>- {subtext}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   )
 }
@@ -145,7 +150,7 @@ export default function Velofood(): React.ReactElement {
             </div>
             {/* Languages */}
             <div className='flex items-center justify-between pt-2 w-48'>
-              <span style={{ marginRight: '45px'}}>German</span>
+              <span style={{ marginRight: '45px' }}>German</span>
               <div className='flex'>
                 <Circle className='mr-1' />
                 <Circle className='mr-1' />
@@ -155,7 +160,7 @@ export default function Velofood(): React.ReactElement {
               </div>
             </div>
             <div className='flex items-center justify-between pt-2 w-48'>
-              <span style={{ marginRight: '51px'}}>English</span>
+              <span style={{ marginRight: '51px' }}>English</span>
               <div className='flex'>
                 <Circle className='mr-1' />
                 <Circle className='mr-1' />
@@ -197,7 +202,7 @@ export default function Velofood(): React.ReactElement {
         </HorizontalSection>
         {/* Professional Experience Timeline */}
         <HorizontalSection>
-          <VerticalSectionLeftQuarter>
+          <div className='flex flex-col pl-16 pr-8'>
             {/*
               To recalculate the distanceToScroll after making changes, run this in the browser console:
 
@@ -205,16 +210,9 @@ export default function Velofood(): React.ReactElement {
               const lastCircle = document.querySelector('#last-circle');
               console.log(lastCircle.getBoundingClientRect().top - firstCircle.getBoundingClientRect().top);
              */}
-            <DrawLine distanceToScroll={752} className='ml-12 mt-1' />
-            <Circle id='first-circle' className='ml-14' />
-            <TimelineDate year='2019' style={{ marginTop: '4.5rem' }} />
-            <TimelineDate year='2021' style={{ marginTop: '11.25rem' }} />
-            <TimelineDate year='2022' style={{ marginTop: '9.5rem' }} />
-            <TimelineDate year='2023' style={{ marginTop: '4.5rem' }} />
-            <TimelineDate year='2023' style={{ marginTop: '9rem' }} id='last-circle' />
-          </VerticalSectionLeftQuarter>
-          <VerticalSectionRightThreeQuarter className='items-start self-start'>
+            <DrawLine distanceToScroll={607} marginLeft='62px' />
             <TimelineItem
+              circleSlot={<Circle id='first-circle' className='ml-14' />}
               title="Early Career"
               subtexts={[
                 "Various customer-facing roles in restaurants, surf shops, and film sets",
@@ -222,6 +220,7 @@ export default function Velofood(): React.ReactElement {
               ]}
             />
             <TimelineItem
+              circleSlot={<TimelineDate year='2019' />}
               title="Intern at Echosec Systems"
               subtexts={[
                 "Shadow senior developers to learn the basic technologies of web development",
@@ -230,45 +229,28 @@ export default function Velofood(): React.ReactElement {
               ]}
             />
             {/*
-              "TODO: use STAR method and add some kind of metrics",
-
-              reframe to 'active voice'; 'complete small bug tickets' to 'managed a bug backlog of frontend bugs'
-
-              everything should tell the reader about a skill that you have
-
-              more specifics about the technologies you used
-
-              'learn' -> 'adhere'
-
-              check github for some imperical data
-
-              'Work semi-independently on mentored projects' -> 'Use pair-programming to complete mid-size projects'
-
-              shadow -> pair programming
-
-              comfortbale in scaling organization
-
-              talk about 'agile'
-
-              people don't know what swe stands for -> do junior, intermediate, senior
-
-              comfortable managing a large codebase
-
-              resume is just like your 'grades' - cover letter and interview is where you get to show your personality
-
-              talk about types of projects that you worked on; dates that you worked places
-
-              try to figure out how much
-
-              think about a project that went well that demostrates proficiency in the desired skills
-
-              what did I specifically redesign?
-
-              how many customers were convinced by the actor profile thing?
-
-              velocity
-            */}
+                "TODO: use STAR method and add some kind of metrics",
+                -reframe to 'active voice'; 'complete small bug tickets' to 'managed a bug backlog of frontend bugs'
+                -everything should tell the reader about a skill that you have
+                -more specifics about the technologies you used
+                -'learn' -> 'adhere'
+                -check github for some imperical data
+                -'Work semi-independently on mentored projects' -> 'Use pair-programming to complete mid-size projects'
+                -shadow -> pair programming
+                -comfortbale in scaling organization
+                -talk about 'agile'
+                -people don't know what swe stands for -> do junior, intermediate, senior
+                -comfortable managing a large codebase
+                -resume is just like your 'grades' - cover letter and interview is where you get to show your personality
+                -talk about types of projects that you worked on; dates that you worked places
+                -try to figure out how much
+                -think about a project that went well that demostrates proficiency in the desired skills
+                -what did I specifically redesign?
+                -how many customers were convinced by the actor profile thing?
+                -velocity
+              */}
             <TimelineItem
+              circleSlot={<TimelineDate year='2021' />}
               title="SWE I at Echosec Systems"
               subtexts={[
                 "Work semi-independently on mentored projects",
@@ -279,6 +261,7 @@ export default function Velofood(): React.ReactElement {
               ]}
             />
             <TimelineItem
+              circleSlot={<TimelineDate year='2022' />}
               title="SWE II at Echosec Systems"
               subtexts={[
                 "Take more responsibility and ownership of codebase and projects",
@@ -289,13 +272,14 @@ export default function Velofood(): React.ReactElement {
               ]}
             />
             <TimelineItem
+              circleSlot={<TimelineDate id='last-circle' year='2023' />}
               title="SWE II at Velofood (?!)"
               subtexts={[
                 "Apply skills from previous roles to a new codebase and new problem domain",
                 "Do a really good job and make everybody happy :)"
               ]}
             />
-          </VerticalSectionRightThreeQuarter>
+          </div>
         </HorizontalSection>
       </MainContainer>
     </>
