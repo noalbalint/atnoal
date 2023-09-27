@@ -1,18 +1,23 @@
 noalbalint.com - personal website
 
-the only route currently active is `/vellofood?hire="true"`. The query param has no effect but I thought it was a nice touch for the application :)
+The only route currently active is `noalbalint.com/vellofood?hire=true`. The query param has no effect but I thought it was a nice touch for the application :)
+
 
 -----
 
-for local development:
+The app was created using Vite, and leverages React, Styled Components, Tailwind, and Firebase Hosting.
 
-start the tailwind css generator:
+-----
+
+For local development:
+
+Start the tailwind css generator:
 `$ npx tailwindcss build -i src/index.css -o src/tailwind.css --watch`
 
-in another terminal, start the vite compiler:
+In another terminal, start the vite compiler:
 `$ npm run dev`
 
-to deploy:
+To deploy:
 
 `$ npm run build`
 
