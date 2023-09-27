@@ -161,7 +161,10 @@ export default function Velofood(): React.ReactElement {
               Ajax, and JavaScript. I believe it that my background would be an excellent fit for your open "Verstärkung in der Technik" position.
             </Paragraph>
             <Paragraph>
-              Outside of work I love to ride bikes, and most Wednesdays you can find me turning a wrench at Maghanoy bei Keplerbrücke.
+              Outside of work I love to ride bikes, and most Wednesdays you can find me working at Maghanoy.
+            </Paragraph>
+            <Paragraph>
+              I am originally from Victoria, BC (Canada), but have permanently relocated to Graz and would like to come to the office for work as much as possible.
             </Paragraph>
             <Paragraph>
               Velofood seems like a company with a heart, genuinely trying to make the world a better place. The combination of cycling, technology,
