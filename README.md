@@ -6,7 +6,10 @@ the only route currently active is `/vellofood?hire="true"`. The query param has
 
 for local development:
 
+start the tailwind css generator:
 `$ npx tailwindcss build -i src/index.css -o src/tailwind.css --watch`
+
+in another terminal, start the vite compiler:
 `$ npm run dev`
 
 to deploy:
