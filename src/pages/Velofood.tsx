@@ -8,8 +8,6 @@ const HorizontalSection = styled.div`
   width: 66%;
   display: flex;
   align-items: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
   background-color: #F8FAFC;
 `;
 
@@ -105,10 +103,10 @@ function TimelineItem(
       <div className='flex items-start'>
         {circleSlot}
         <div className='pl-16'>
-          <p className='font-medium text-left'>{title}</p>
+          <p className='font-medium text-left pb-2'>{title}</p>
           <ul>
             {subtexts.map((subtext) => (
-              <li className='pl-2 text-left'>- {subtext}</li>
+              <li className='pl-2 text-left pb-1'>- {subtext}</li>
             ))}
           </ul>
         </div>
@@ -132,7 +130,7 @@ export default function Velofood(): React.ReactElement {
   return (
     <>
       <MainContainer>
-        <HorizontalSection className='mt-8 pt-8'>
+        <HorizontalSection className='mt-8 pt-8 px-8'>
           <VerticalSectionLeftThird>
             {/* Photo */}
             <img src={noal} className='mb-6 mx-5 rounded-lg w-56' alt="the applicant" />
@@ -170,6 +168,8 @@ export default function Velofood(): React.ReactElement {
               </div>
             </div>
           </VerticalSectionLeftThird>
+
+          {/* Cover Letter */}
           <VerticalSectionRightTwoThird className='items-center pt-0'>
             <span className='text-left text-4xl self-start pb-1'>NOAL BALINT</span>
             <span className='text-left text-4xl self-start pb-1'>Eure Verstärkung in der Technik</span>
@@ -187,22 +187,26 @@ export default function Velofood(): React.ReactElement {
             </Paragraph>
           </VerticalSectionRightTwoThird>
         </HorizontalSection>
+
         {/* Technology logos */}
-        <HorizontalSection className='justify-center'>
+        <HorizontalSection className='justify-center pt-8 px-16'>
           <div className='flex flex-col w-full'>
             <div className='pb-8 px-16'>
               <LogoSection />
             </div>
           </div>
         </HorizontalSection>
-        <HorizontalSection className='justify-center pb-8'>
+
+        {/* Section Header */}
+        <HorizontalSection className='justify-center pt-4 pb-12'>
           <Line className='w-72' />
           <span> Summary of Professional Experience </span>
           <Line className='w-72' />
         </HorizontalSection>
+
         {/* Professional Experience Timeline */}
-        <HorizontalSection>
-          <div className='flex flex-col pl-16 pr-8'>
+        <HorizontalSection className=' pl-32 pr-16'>
+          <div className='flex flex-col'>
             {/*
               To recalculate the distanceToScroll after making changes, run this in the browser console:
 
@@ -210,76 +214,64 @@ export default function Velofood(): React.ReactElement {
               const lastCircle = document.querySelector('#last-circle');
               console.log(lastCircle.getBoundingClientRect().top - firstCircle.getBoundingClientRect().top);
              */}
-            <DrawLine distanceToScroll={607} marginLeft='62px' />
+            <DrawLine distanceToScroll={550} marginLeft='62px' />
             <TimelineItem
               circleSlot={<Circle id='first-circle' className='ml-14' />}
               title="Early Career"
               subtexts={[
                 "Various customer-facing roles in restaurants, surf shops, and film sets",
-                "Develop communication, humility, task prioritization, and attention to detail"
+                "Develop soft skills: communication, humility, task prioritization, and attention to detail"
               ]}
             />
             <TimelineItem
               circleSlot={<TimelineDate year='2019' />}
-              title="Intern at Echosec Systems"
+              title="Echosec Systems - Student Intern"
               subtexts={[
-                "Shadow senior developers to learn the basic technologies of web development",
-                "Complete small bugs tickets and features with considerable guidance",
-                "Learn the 'gestalt' of good programming: pull request etiquette, avoiding bikeshedding, code documentation, naming, structure, etc.",
+                "Pair-programming with seniors to build foundational knowledge of HTML, CSS, and TypeScript",
+                "Participate in agile scrum ceremonies: standups, retros, and sprint planning",
               ]}
             />
-            {/*
-                "TODO: use STAR method and add some kind of metrics",
-                -reframe to 'active voice'; 'complete small bug tickets' to 'managed a bug backlog of frontend bugs'
-                -everything should tell the reader about a skill that you have
-                -more specifics about the technologies you used
-                -'learn' -> 'adhere'
-                -check github for some imperical data
-                -'Work semi-independently on mentored projects' -> 'Use pair-programming to complete mid-size projects'
-                -shadow -> pair programming
-                -comfortbale in scaling organization
-                -talk about 'agile'
-                -people don't know what swe stands for -> do junior, intermediate, senior
-                -comfortable managing a large codebase
-                -resume is just like your 'grades' - cover letter and interview is where you get to show your personality
-                -talk about types of projects that you worked on; dates that you worked places
-                -try to figure out how much
-                -think about a project that went well that demostrates proficiency in the desired skills
-                -what did I specifically redesign?
-                -how many customers were convinced by the actor profile thing?
-                -velocity
-              */}
             <TimelineItem
               circleSlot={<TimelineDate year='2021' />}
-              title="SWE I at Echosec Systems"
+              title="Echosec Systems - Junior Frontend Developer"
               subtexts={[
-                "Work semi-independently on mentored projects",
-                "Make meaningful contributions in the code review process.",
-                "Ownership of small bugs tickets and features with some guidance from mentors",
-                "Developing high-level understanding of the company/codebase as a whole",
-                "Increase time to first contentful paint by 200% through preloading and code splitting",
+                "Ownership of small frontend bugs and features, completed with some guidance from mentors",
+                "Improve load time by 200%+ through preloading, lazyloading, code splitting",
+                "Top contributor in pull request reviews"
               ]}
             />
             <TimelineItem
               circleSlot={<TimelineDate year='2022' />}
-              title="SWE II at Echosec Systems"
+              title="Echosec Systems - Intermediate Frontend Developer"
               subtexts={[
-                "Take more responsibility and ownership of codebase and projects",
-                "Ownership of many mid-sized features with minimal or no guidance",
-                "Translate business requirements into Figma mockups and JIRA tickets",
+                "Lead multiple major fullstack features, tranlating product requirements into Figma mockups and API schema",
+                "Core contributor of world-class digital threat intelligence product, recently acquired for +$100M",
+                "Rise to #3 code contributor, after CTO and principle engineer",
                 "Participate in customer calls and demos as a technical expert",
-                "Mastery of core frontend stack; beginning to dabble in PHP and Cypress",
               ]}
             />
+            {/* TODO: it would be cool if when the line hit this point, it would turn another color and make a confetti or something */}
             <TimelineItem
               circleSlot={<TimelineDate id='last-circle' year='2023' />}
-              title="SWE II at Velofood (?!)"
+              title="Velofood - Intermediate Frontend Developer (?!)"
               subtexts={[
-                "Apply skills from previous roles to a new codebase and new problem domain",
+                "Apply skills from previous roles to a new codebase and problem domain",
                 "Do a really good job and make everybody happy :)"
               ]}
             />
           </div>
+        </HorizontalSection>
+        <HorizontalSection className='mb-8 pt-16 px-32 flex flex-col'>
+          <Paragraph>
+            During my time at Echosec, we were acquired twice an scaled from 12 people to more than 500. I am really looking forward to work in a smaller
+            company again, where I can have a greater impact on the product and the company culture.
+          </Paragraph>
+          <Paragraph>
+            I would be available to begin work in approximately 30 days, and I would ideally like to start at 24 hours per week.
+          </Paragraph>
+          <Paragraph style={{ textAlign: 'center' }} className='py-4'>
+            This site was built in 3 days entirely for the purpose of this application. I hope you like it!
+          </Paragraph>
         </HorizontalSection>
       </MainContainer>
     </>
