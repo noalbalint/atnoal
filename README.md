@@ -1,6 +1,6 @@
 noalbalint.com - personal website
 
-the only route currently active it `/vellofood?hire="true"`. The query param has no effect but I thought it was a nice touch for the application :)
+the only route currently active is `/vellofood?hire="true"`. The query param has no effect but I thought it was a nice touch for the application :)
 
 -----
 
