@@ -7,11 +7,7 @@ export default function ScrollLine(
 ): React.ReactElement {
   useEffect(() => {
     // Get a reference to the <path>
-    const path = document.querySelector('#line-path') as SVGPathElement | null;
-
-    if (path === null) {
-      return;
-    }
+    const path = document.querySelector('#line-path') as SVGPathElement;
 
     // Set the total length of the path
     path.style.strokeDasharray = `${distanceToScroll}`;
