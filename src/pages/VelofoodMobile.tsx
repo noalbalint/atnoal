@@ -115,7 +115,7 @@ export default function VelofoodMobile(): React.ReactElement {
           <TimelineItem
             title="Echosec Systems - Student Intern"
             subtexts={[
-              "Pair-programming with seniors to build foundational knowledge of HTML, CSS, and TypeScript",
+              "Pair-programming with seniors to build foundational knowledge of HTML, CSS, Javascript, TypeScript, and Vue",
               "Participate in agile scrum ceremonies: standups, retros, and sprint planning",
             ]}
           />

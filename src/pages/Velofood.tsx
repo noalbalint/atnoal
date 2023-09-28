@@ -173,7 +173,7 @@ export function Velofood(): React.ReactElement {
               circleSlot={<TimelineDate year='2019' />}
               title="Echosec Systems - Student Intern"
               subtexts={[
-                "Pair-programming with seniors to build foundational knowledge of HTML, CSS, and TypeScript",
+                "Pair-programming with seniors to build foundational knowledge of HTML, CSS, JavaScript, TypeScript, and Vue.js",
                 "Participate in agile scrum ceremonies: standups, retros, and sprint planning",
               ]}
             />
