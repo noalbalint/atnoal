@@ -1,7 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from './pages/Home'
-import Velofood from './pages/Velofood'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -9,12 +7,15 @@ import {
 import AnimatedCursor from "react-animated-cursor"
 import './index.css'
 import './tailwind.css'
+import Home from './pages/Home'
+import Velofood from './pages/Velofood'
+import Error404 from './pages/Error404';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    errorElement: <p>404 - That page doesn't exist</p>,
+    errorElement: < Error404 />,
   },
   {
     path: "/velofood",
