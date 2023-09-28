@@ -8,7 +8,7 @@ import AnimatedCursor from "react-animated-cursor"
 import './index.css'
 import './tailwind.css'
 import Home from './pages/Home'
-import Velofood from './pages/Velofood'
+import VelofoodWrapper from './pages/VelofoodWrapper'
 import Error404 from './pages/Error404';
 
 const router = createBrowserRouter([
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/velofood",
-    element: <Velofood />,
+    element: <VelofoodWrapper />,
   },
 ]);
 
