@@ -46,16 +46,16 @@ export default function VelofoodMobile(): React.ReactElement {
             {/* Photo */}
             <img
               src={noal}
-              className='ounded-3xl w-32'
+              className='rounded-3xl w-32'
               alt="the applicant"
             />
-            <div className='flex flex-col w-full pl-6 justify-start'>
+            <div className='flex flex-col w-full pl-4 justify-start'>
               {/* Phone */}
               <span className='w-fit'>+43 699 819 483 46</span>
               {/* Email */}
               <span className='w-fit pt-1'>noalbalint@gmail.com</span>
               {/* Languages */}
-              <div className='flex flex-row justify-between items-center pt-1'>
+              <div className='flex flex-row justify-between items-center pt-2'>
                 <span>German</span>
                 <div className='flex'>
                   <Circle className='mr-1' />
@@ -167,7 +167,7 @@ export default function VelofoodMobile(): React.ReactElement {
               <a
                 style={{ color: '#01AD4C' }}
                 className='w-fit pl-1 font-normal'
-                href="sms:004369981948346"
+                href="sms:+4369981948346"
               >
                 say hello!
               </a>
