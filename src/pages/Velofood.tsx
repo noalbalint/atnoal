@@ -63,16 +63,16 @@ export function Velofood(): React.ReactElement {
               className='mb-4 mx-5 rounded-lg w-56'
               alt="the applicant"
             />
-            {/* Phone */}
-            <div className="inline-flex w-full pb-2 pt-1">
-              <span className='w-full'>+43 699 819 483 46</span>
-            </div>
             {/* Email */}
-            <div className="inline-flex w-full pb-2">
+            <div className="inline-flex pt-1.5 w-full">
               <span className='w-full'>noalbalint@gmail.com</span>
             </div>
+            {/* Phone */}
+            <div className="inline-flex pt-1.5 w-full">
+              <span className='w-full'>+43 699 819 483 46</span>
+            </div>
             {/* Linkedin */}
-            <div className="inline-flex pb-2">
+            <div className="inline-flex pt-1.5">
               <Link
                 href='https://www.linkedin.com/in/noal-balint-91083510b/'
                 target='_blank'
@@ -81,7 +81,7 @@ export function Velofood(): React.ReactElement {
               </Link>
             </div>
             {/* Github */}
-            <div className="inline-flex pb-2">
+            <div className="inline-flex pt-1.5">
               <Link
                 href='https://github.com/noalbalint/atnoal'
                 target='_blank'
@@ -90,8 +90,8 @@ export function Velofood(): React.ReactElement {
               </Link>
             </div>
             {/* Languages */}
-            <div className='flex flex-row w-full justify-between px-20 items-center pt-2'>
-              <span style={{ marginRight: '45px' }}>German</span>
+            <div className='flex flex-row justify-between items-center pt-2'>
+              <span style={{ marginRight: '14px' }}>German</span>
               <div className='flex'>
                 <Circle className='mr-1' />
                 <Circle className='mr-1' />
@@ -100,8 +100,8 @@ export function Velofood(): React.ReactElement {
                 <OutlinedCircle className='mr-1' />
               </div>
             </div>
-            <div className='flex flex-row w-full justify-between px-20 items-center pt-2'>
-              <span style={{ marginRight: '51px' }}>English</span>
+            <div className='flex flex-row justify-between items-center pt-2'>
+              <span style={{ marginRight: '21px' }}>English</span>
               <div className='flex'>
                 <Circle className='mr-1' />
                 <Circle className='mr-1' />
@@ -120,7 +120,7 @@ export function Velofood(): React.ReactElement {
               Eure Verstärkung in der Technik
             </span>
             <i
-              className='text-left text-2xl self-start pb-6'
+              className='text-left text-2xl self-start pb-8'
             >
               Application to Velofood - Noal Balint
             </i>
@@ -261,16 +261,16 @@ const HorizontalSection = styled.div`
 `;
 
 const VerticalSectionLeftThird = styled.div`
-  width: 33%;
+  width: 30%;
   align-self: start;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.5rem 0 1.5rem 3rem;
 `;
 
 const VerticalSectionRightTwoThird = styled.div`
-  width: 66%;
+  width: 70%;
   align-self: start;
   display: flex;
   flex-direction: column;
@@ -297,16 +297,15 @@ const Circle = styled.div`
 `;
 
 const OutlinedCircle = styled.div`
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
   border-radius: 50%;
-  border: 2px solid #b9b9b9;
+  border: 1px solid #b9b9b9;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 20px;
-  margin-right: 2px;
+  margin-right: 3px;
 `;
 
 const Line = styled.hr`
