@@ -220,18 +220,17 @@ export function Velofood(): React.ReactElement {
 
         {/* Outro */}
         <HorizontalSection className='mb-24 pb-8 px-36 flex flex-col'>
-          <div className='flex py-8 font-normal text-xl'>
-            <p className='w-fit'>
-              If you have any questions or would like to chat,
-            </p>
-            <Link
-              className='w-fit pl-1'
+          <p className='w-fit'>
+            If you have any questions or would like to know more, just
+            <a
+              style={{ color: '#01AD4C' }}
+              className='w-fit pl-1 font-normal'
               href="mailto:noalbalint@gmail.com?subject=Re: Velofood Application"
               target='_blank'
             >
               say hello!
-            </Link>
-          </div>
+            </a>
+          </p>
         </HorizontalSection>
       </MainContainer>
       <div className='pb-72' />

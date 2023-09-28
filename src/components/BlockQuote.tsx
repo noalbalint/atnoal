@@ -1,6 +1,7 @@
 import quoteOpen from '../assets/quoteOpen.svg'
 import quoteClose from '../assets/quoteClose.svg'
 
+// TODO: Make this reusable/generic
 export default function BlockQuote({ className }: { className?: string }) {
   return (
     <div className={`${className} relative`}>
