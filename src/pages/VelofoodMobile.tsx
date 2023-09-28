@@ -25,7 +25,7 @@ function TimelineItem(
 export default function VelofoodMobile(): React.ReactElement {
   return (
     <>
-      <div className='flex flex-col w-full mt-8'>
+      <div className='flex flex-col w-full mt-8 max-w-md'>
         {/* Header */}
         <MobileSection>
           <span
