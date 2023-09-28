@@ -14,7 +14,7 @@ export default function BlockQuote({ className }: { className?: string }) {
           href="https://www.linkedin.com/in/joan-orrit-palau/"
           target='_blank'
           style={{ color: '#01AD4C' }}
-          className='absolute bottom-6 right-36'
+          className='absolute bottom-0 right-36'
         >
           - Joan P. (Backend Engineer)
         </a>

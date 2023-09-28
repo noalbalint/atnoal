@@ -52,20 +52,6 @@ export function Velofood(): React.ReactElement {
     setdrawLineLength(lastCircle?.getBoundingClientRect().top - firstCircle.getBoundingClientRect().top);
   }, []);
 
-  // Mobile fallback
-  if (window.innerWidth < 1000) {
-    return (
-      <>
-        <div className='flex flex-col justify-center'>
-          <p>Sorry, mobile not supported.</p>
-          <p className='pt-4'>Please try again on a larger screen :)</p>
-        </div>
-      </>
-    )
-  }
-
-
-  // Desktop view
   return (
     <>
       <MainContainer>
@@ -74,7 +60,7 @@ export function Velofood(): React.ReactElement {
             {/* Photo */}
             <img
               src={noal}
-              className='mb-6 mx-5 rounded-lg w-56'
+              className='mb-4 mx-5 rounded-lg w-56'
               alt="the applicant"
             />
             {/* Phone */}
@@ -104,7 +90,7 @@ export function Velofood(): React.ReactElement {
               </Link>
             </div>
             {/* Languages */}
-            <div className='flex flex-row w-full justify-between px-20 items-center pt-4'>
+            <div className='flex flex-row w-full justify-between px-20 items-center pt-2'>
               <span style={{ marginRight: '45px' }}>German</span>
               <div className='flex'>
                 <Circle className='mr-1' />
@@ -129,26 +115,21 @@ export function Velofood(): React.ReactElement {
           {/* Cover Letter */}
           <VerticalSectionRightTwoThird className='items-center pt-0'>
             <span
-              className='text-left text-4xl self-start pb-1'
-            >
-              NOAL BALINT
-            </span>
-            <span
-              className='text-left text-4xl self-start pb-1'
+              className='text-left text-4xl self-start pb-4'
             >
               Eure Verstärkung in der Technik
             </span>
             <i
               className='text-left text-2xl self-start pb-6'
             >
-              Application to Velofood
+              Application to Velofood - Noal Balint
             </i>
             <Paragraph>
               I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps using HTML, CSS, PHP,
               Ajax, and JavaScript. I believe that my background would be an excellent fit for your open "Verstärkung in der Technik" position.
             </Paragraph>
             <Paragraph>
-              Outside of work I love to ride bikes, and most Wednesdays you can find me working at Maghanoy.
+              Outside of work I love to bikes, both to ride and to repair. Most Wednesdays you can find me working on my restoration/upcycling project at Maghanoy.
             </Paragraph>
             <Paragraph>
               I am originally from Victoria, BC (Canada), but have permanently relocated to Graz and would like to come to the office for work as much as possible.
@@ -161,7 +142,7 @@ export function Velofood(): React.ReactElement {
         </HorizontalSection>
 
         {/* Technology logos */}
-        <HorizontalSection className='justify-center py-10 px-32'>
+        <HorizontalSection className='justify-center pb-8 pt-6 px-32'>
           <div className='flex flex-col w-full'>
             <LogoSection />
           </div>
@@ -258,6 +239,20 @@ export function Velofood(): React.ReactElement {
   )
 }
 
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 300;
+  align-self: center;
+  line-height: 1.9rem;
+
+  ::selection {
+    background-color: #01AD4C;
+    color: #fff;
+  }
+`;
+
 const HorizontalSection = styled.div`
   width: 1300px;
   display: flex;
@@ -327,18 +322,5 @@ const Link = styled.a`
     color: #01AD4C;
   }
 `
-
-const MainContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: 300;
-  align-self: center;
-
-  ::selection {
-    background-color: #01AD4C;
-    color: #fff;
-  }
-`;
 
 export default Velofood;
