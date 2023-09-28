@@ -5,88 +5,6 @@ import DrawLine from '../components/DrawLine'
 import LogoSection from '../components/LogoSection';
 import BlockQuote from '../components/BlockQuote';
 
-const HorizontalSection = styled.div`
-  width: 1300px;
-  display: flex;
-  align-items: center;
-  background-color: #F8FAFC;
-`;
-
-const VerticalSectionLeftThird = styled.div`
-  width: 33%;
-  align-self: start;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5rem;
-`;
-
-const VerticalSectionRightTwoThird = styled.div`
-  width: 66%;
-  align-self: start;
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-  padding-right: 4rem;
-`;
-
-const Paragraph = styled.p`
-  width: 100%;
-  text-align: left;
-  margin-bottom: 12px;
-`;
-
-const Circle = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #b9b9b9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 20px;
-`;
-
-const OutlinedCircle = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 2px solid #b9b9b9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 20px;
-  margin-right: 2px;
-`;
-
-const Line = styled.hr`
-  margin-left: 30px;
-  margin-right: 30px;
-`;
-
-const Link = styled.a`
-  color: #01AD4C;
-  font-weight: 500;
-
-  &:hover {
-    color: #01AD4C;
-  }
-`
-
-const MainContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: 300;
-
-  ::selection {
-    background-color: #01AD4C;
-    color: #fff;
-  }
-`;
-
 function TimelineItem(
   { title, subtexts, circleSlot }: { title: string, subtexts: string[], circleSlot: React.ReactNode }
 ): React.ReactElement {
@@ -146,17 +64,6 @@ export function Velofood(): React.ReactElement {
     )
   }
 
-  // XT screen fallback
-  if (window.innerHeight > 1600) {
-    return (
-      <>
-        <div className='flex flex-col justify-center'>
-          <p>Please zoom in a little and reload :)</p>
-          <p className='pt-4'>This pages displays best on laptop-sized screens</p>
-        </div>
-      </>
-    )
-  }
 
   // Desktop view
   return (
@@ -346,8 +253,92 @@ export function Velofood(): React.ReactElement {
           </div>
         </HorizontalSection>
       </MainContainer>
+      <div className='pb-72' />
     </>
   )
 }
+
+const HorizontalSection = styled.div`
+  width: 1300px;
+  display: flex;
+  align-items: center;
+  background-color: #F8FAFC;
+`;
+
+const VerticalSectionLeftThird = styled.div`
+  width: 33%;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+`;
+
+const VerticalSectionRightTwoThird = styled.div`
+  width: 66%;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  padding-right: 4rem;
+`;
+
+const Paragraph = styled.p`
+  width: 100%;
+  text-align: left;
+  margin-bottom: 12px;
+`;
+
+const Circle = styled.div`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #b9b9b9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+`;
+
+const OutlinedCircle = styled.div`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #b9b9b9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  margin-right: 2px;
+`;
+
+const Line = styled.hr`
+  margin-left: 30px;
+  margin-right: 30px;
+`;
+
+const Link = styled.a`
+  color: #01AD4C;
+  font-weight: 500;
+
+  &:hover {
+    color: #01AD4C;
+  }
+`
+
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 300;
+  align-self: center;
+
+  ::selection {
+    background-color: #01AD4C;
+    color: #fff;
+  }
+`;
 
 export default Velofood;

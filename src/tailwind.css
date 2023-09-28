@@ -913,6 +913,10 @@ video {
   padding-top: 2.5rem;
 }
 
+.pb-72 {
+  padding-bottom: 18rem;
+}
+
 .text-left {
   text-align: left;
 }
