@@ -55,24 +55,26 @@ export default function VelofoodMobile(): React.ReactElement {
               {/* Email */}
               <span className='w-fit pt-1'>noalbalint@gmail.com</span>
               {/* Languages */}
-              <div className='flex flex-row justify-between items-center pt-2'>
-                <span>German</span>
-                <div className='flex'>
-                  <Circle className='mr-1' />
-                  <Circle className='mr-1' />
-                  <OutlinedCircle className='mr-1' />
-                  <OutlinedCircle className='mr-1' />
-                  <OutlinedCircle className='mr-1' />
+              <div className='w-44'>
+                <div className='flex flex-row justify-between items-center pt-2'>
+                  <span>German</span>
+                  <div className='flex'>
+                    <Circle className='mr-1' />
+                    <Circle className='mr-1' />
+                    <OutlinedCircle className='mr-1' />
+                    <OutlinedCircle className='mr-1' />
+                    <OutlinedCircle className='mr-1' />
+                  </div>
                 </div>
-              </div>
-              <div className='flex flex-row justify-between items-center pt-2'>
-                <span>English</span>
-                <div className='flex'>
-                  <Circle className='mr-1' />
-                  <Circle className='mr-1' />
-                  <Circle className='mr-1' />
-                  <Circle className='mr-1' />
-                  <Circle className='mr-1' />
+                <div className='flex flex-row justify-between items-center pt-2'>
+                  <span>English</span>
+                  <div className='flex'>
+                    <Circle className='mr-1' />
+                    <Circle className='mr-1' />
+                    <Circle className='mr-1' />
+                    <Circle className='mr-1' />
+                    <Circle className='mr-1' />
+                  </div>
                 </div>
               </div>
             </div>
@@ -136,7 +138,7 @@ export default function VelofoodMobile(): React.ReactElement {
           />
           {/* TODO: it would be cool if when the line hit this point, it would turn another color and make a confetti or something */}
           <TimelineItem
-            title="Velofood - Intermediate Frontend Developer (!?)"
+            title="Velofood - Intermediate Frontend Developer (?)"
             subtexts={[
               "Apply skills from previous roles to a new codebase and problem domain",
               "Do a really good job and make users happy :)"
@@ -180,8 +182,8 @@ export default function VelofoodMobile(): React.ReactElement {
 }
 
 const Circle = styled.div`
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background-color: #b9b9b9;
   display: flex;
@@ -192,8 +194,8 @@ const Circle = styled.div`
 `;
 
 const OutlinedCircle = styled.div`
-  width: 21px;
-  height: 21px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   border: 1px solid #b9b9b9;
   display: flex;
