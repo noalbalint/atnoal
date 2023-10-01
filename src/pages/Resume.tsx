@@ -36,7 +36,13 @@ function TimelineDate(
   )
 }
 
-export function Velofood(): React.ReactElement {
+export function Resume({
+  companyName = '',
+  coverLetter = [''],
+}: {
+  companyName: string,
+  coverLetter: string[],
+}): React.ReactElement {
   const [drawLineLength, setdrawLineLength] = useState<number | null>(null);
 
   useEffect(() => {
@@ -122,22 +128,11 @@ export function Velofood(): React.ReactElement {
             <i
               className='text-left text-2xl self-start pb-8'
             >
-              Application to Velofood - Noal Balint
+              Application to {companyName} - Noal Balint
             </i>
-            <Paragraph>
-              I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps using HTML, CSS, PHP,
-              Ajax, and JavaScript. I believe that my background would be an excellent fit for your open "Verstärkung in der Technik" position.
-            </Paragraph>
-            <Paragraph>
-              Outside of work I love to bikes, both to ride and to repair. Most Wednesdays you can find me working on my restoration/upcycling project at Maghanoy.
-            </Paragraph>
-            <Paragraph>
-              I am originally from Victoria, BC (Canada), but have permanently relocated to Graz and would like to come to the office for work as much as possible.
-            </Paragraph>
-            <Paragraph>
-              Velofood seems like a company with a heart, genuinely trying to make the world a better place. The combination of cycling, technology,
-              social welfare and sustainability is a perfect nexus for me, and I am extremely motivated to join your team!
-            </Paragraph>
+            {coverLetter.map((text: string, index: number) => (
+              <Paragraph key={index}>{text}</Paragraph>
+            ))}
           </VerticalSectionRightTwoThird>
         </HorizontalSection>
 
@@ -199,10 +194,10 @@ export function Velofood(): React.ReactElement {
             {/* TODO: it would be cool if when the line hit this point, it would turn another color and make a confetti or something */}
             <TimelineItem
               circleSlot={<TimelineDate id='last-circle' year='2023' />}
-              title="Velofood - Intermediate Frontend Developer (?)"
+              title={`${companyName} - Intermediate Frontend Developer (?)`}
               subtexts={[
                 "Apply skills from previous roles to a new codebase and problem domain",
-                "Do a really good job and make users happy :)"
+                "Do a really good job and make everybody happy :)"
               ]}
             />
           </div>
@@ -225,7 +220,7 @@ export function Velofood(): React.ReactElement {
             <a
               style={{ color: '#01AD4C' }}
               className='w-fit pl-1 font-normal'
-              href="mailto:noalbalint@gmail.com?subject=Re: Velofood Application"
+              href={`mailto:noalbalint@gmail.com?subject=Re: ${companyName} Application`}
               target='_blank'
             >
               say hello!
@@ -277,7 +272,7 @@ const VerticalSectionRightTwoThird = styled.div`
   padding-right: 4rem;
 `;
 
-const Paragraph = styled.p`
+const Paragraph = styled.div`
   width: 100%;
   text-align: left;
   margin-bottom: 12px;
@@ -321,4 +316,4 @@ const Link = styled.a`
   }
 `
 
-export default Velofood;
+export default Resume;

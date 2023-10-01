@@ -4,11 +4,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { velofood } from './coverLetters';
 import AnimatedCursor from "react-animated-cursor"
 import './index.css'
 import './tailwind.css'
 import Home from './pages/Home'
-import VelofoodWrapper from './pages/VelofoodWrapper'
+import ResumeWrapper from './pages/ResumeWrapper'
 import Error404 from './pages/Error404';
 
 const router = createBrowserRouter([
@@ -19,7 +20,10 @@ const router = createBrowserRouter([
   },
   {
     path: "/velofood",
-    element: <VelofoodWrapper />,
+    element: <ResumeWrapper
+      companyName='Velofood'
+      coverLetter={velofood}
+    />,
   },
 ]);
 
