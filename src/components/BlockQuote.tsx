@@ -2,7 +2,13 @@ import quoteOpen from '../assets/quoteOpen.svg'
 import quoteClose from '../assets/quoteClose.svg'
 
 // TODO: Make this reusable/generic
-export default function BlockQuote({ className }: { className?: string }) {
+export default function BlockQuote({
+  color,
+  className,
+}: {
+  color: string
+  className?: string
+}) {
   return (
     <div className={`${className} relative`}>
       <img className='absolute top-0 left-32 w-32 opacity-10' src={quoteOpen} />
@@ -14,7 +20,7 @@ export default function BlockQuote({ className }: { className?: string }) {
         <a
           href="https://www.linkedin.com/in/joan-orrit-palau/"
           target='_blank'
-          style={{ color: '#01AD4C' }}
+          style={{ color }}
           className='absolute bottom-0 right-36'
         >
           - Joan P. (Backend Engineer)

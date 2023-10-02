@@ -156,7 +156,9 @@ export default function ResumeMobile({
         </MobileSection>
 
         {/* Reference from Joan */}
-        <BlockQuoteMobile />
+        <BlockQuoteMobile
+          color={accentColor}
+        />
 
         {/* Section Header */}
         <MobileSection>

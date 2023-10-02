@@ -196,7 +196,10 @@ export function Resume({
         <HorizontalSection className=' pl-32 pr-16 pb-10 justify-center'>
           <div className='flex flex-col'>
             {drawLineLength && (
-              <DrawLine distanceToScroll={drawLineLength} marginLeft='62px' />
+              <DrawLine
+                distanceToScroll={drawLineLength}
+                marginLeft='62px'
+              />
             )}
             <TimelineItem
               circleSlot={<Circle id='first-circle' className='ml-14' />}
@@ -247,7 +250,10 @@ export function Resume({
 
         {/* Reference from Joan */}
         <HorizontalSection className='flex flex-col'>
-          <BlockQuote className='w-full h-72' />
+          <BlockQuote
+            color={accentColor}
+            className='w-full h-72'
+          />
         </HorizontalSection>
 
         {/* Line */}
