@@ -11,7 +11,7 @@ export default function BlockQuote({
     <>
       <div className='relative'>
         <img className='absolute top-0 left-10 w-32 opacity-10' src={quoteOpen} />
-        <p className='text-left pt-8 px-12'>
+        <p className='text-left pt-6 px-12'>
           Noal is one of those people you always want on your team. He is always eager to mentor and learn from others. He aims for excellence while understanding that trade-offs are sometimes needed. <br/><br/>
           While I worked with him, Noal led many different features from start to finish: designing, delegating, and overseeing the completion of the feature, and coding many of the tickets himself. <br/><br/>
           Noal was also a pleasure to work with. He would organize meetings when requirements were not precise and bring with him a can-do and positive attitude.
