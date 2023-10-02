@@ -3,15 +3,17 @@ import Resume from './Resume'
 import ResumeMobile from './ResumeMobile';
 
 export default function ResumeWrapper({
-  companyName = '',
-  coverLetter = '',
+  companyName,
+  coverLetter,
+  accentColor,
 }: {
   companyName: string,
-  coverLetter: string,
+  coverLetter: string[],
+  accentColor: string,
 }): React.ReactElement {
   if (window.innerWidth < 1000) {
-    return ResumeMobile({ companyName, coverLetter });
+    return ResumeMobile({ companyName, coverLetter, accentColor });
   }
 
-  return Resume({ companyName, coverLetter });
+  return Resume({ companyName, coverLetter, accentColor });
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import noal from '@/assets/noal.jpg'
+import AnimatedCursor from "react-animated-cursor"
 import styled from 'styled-components';
 import DrawLine from '../components/DrawLine'
 import LogoSection from '../components/LogoSection';
@@ -37,10 +38,12 @@ function TimelineDate(
 }
 
 export function Resume({
-  companyName = '',
-  coverLetter = [''],
+  companyName,
+  accentColor,
+  coverLetter,
 }: {
   companyName: string,
+  accentColor: string,
   coverLetter: string[],
 }): React.ReactElement {
   const [drawLineLength, setdrawLineLength] = useState<number | null>(null);
@@ -58,8 +61,46 @@ export function Resume({
     setdrawLineLength(lastCircle?.getBoundingClientRect().top - firstCircle.getBoundingClientRect().top);
   }, []);
 
+  const MainContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+    align-self: center;
+    line-height: 1.9rem;
+
+    ::selection {
+        background-color: ${accentColor};
+      color: #fff;
+    }
+  `;
+
+
+  const Link = styled.a`
+    color: ${accentColor};
+    font-weight: 500;
+
+    &:hover {
+      color: ${accentColor};
+    }
+  `;
+
+  // Remove the hash (#) if it's present
+  const hex = accentColor.replace(/^#/, '');
+
+  // Parse the hex values into separate R, G, and B values
+  const r = parseInt(hex.slice(0, 2), 16);
+  const g = parseInt(hex.slice(2, 4), 16);
+  const b = parseInt(hex.slice(4, 6), 16);
+
+
   return (
     <>
+      <AnimatedCursor
+        innerSize={10}
+        outerSize={10}
+        color={`${r}, ${g}, ${b}`}
+      />
       <MainContainer>
         <HorizontalSection className='mt-16 pt-8 px-8'>
           <VerticalSectionLeftThird>
@@ -130,6 +171,7 @@ export function Resume({
             >
               Application to {companyName} - Noal Balint
             </i>
+            {/* Cover Letter */}
             {coverLetter.map((text: string, index: number) => (
               <Paragraph key={index}>{text}</Paragraph>
             ))}
@@ -218,7 +260,7 @@ export function Resume({
           <p className='w-fit'>
             If you have any questions or would like to know more, just
             <a
-              style={{ color: '#01AD4C' }}
+              style={{ color: accentColor }}
               className='w-fit pl-1 font-normal'
               href={`mailto:noalbalint@gmail.com?subject=Re: ${companyName} Application`}
               target='_blank'
@@ -232,20 +274,6 @@ export function Resume({
     </>
   )
 }
-
-const MainContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: 300;
-  align-self: center;
-  line-height: 1.9rem;
-
-  ::selection {
-    background-color: #01AD4C;
-    color: #fff;
-  }
-`;
 
 const HorizontalSection = styled.div`
   width: 1300px;
@@ -306,14 +334,5 @@ const Line = styled.hr`
   margin-left: 30px;
   margin-right: 30px;
 `;
-
-const Link = styled.a`
-  color: #01AD4C;
-  font-weight: 500;
-
-  &:hover {
-    color: #01AD4C;
-  }
-`
 
 export default Resume;

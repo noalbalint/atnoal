@@ -5,7 +5,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { velofood } from './coverLetters';
-import AnimatedCursor from "react-animated-cursor"
 import './index.css'
 import './tailwind.css'
 import Home from './pages/Home'
@@ -23,19 +22,14 @@ const router = createBrowserRouter([
     element: <ResumeWrapper
       companyName='Velofood'
       coverLetter={velofood}
+      accentColor='#01AD4C'
     />,
   },
 ]);
 
-
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <>
     <React.StrictMode />
-      <AnimatedCursor
-        innerSize={10}
-        outerSize={10}
-        color='1, 173, 76'
-      />
       <RouterProvider router={router} />
     <React.StrictMode />
   </>,

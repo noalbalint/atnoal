@@ -23,11 +23,13 @@ function TimelineItem(
 }
 
 export default function ResumeMobile({
-  companyName = '',
-  coverLetter = '',
+  companyName,
+  coverLetter,
+  accentColor,
 }: {
   companyName: string,
-  coverLetter: string,
+  coverLetter: string[],
+  accentColor: string,
 }
 ): React.ReactElement {
   return (
@@ -90,15 +92,16 @@ export default function ResumeMobile({
 
         {/* Cover Letter */}
         <MobileSection>
-          <Paragraph>
-            {coverLetter}
-          </Paragraph>
+          {/* Cover Letter */}
+          {coverLetter.map((text: string, index: number) => (
+            <Paragraph key={index}>{text}</Paragraph>
+          ))}
         </MobileSection>
 
         {/* Section Header */}
         <MobileSection>
           <hr className='w-1/2 pb-2' />
-            <span className='w-58 font-normal'> Summary of Professional Experience </span>
+          <span className='w-58 font-normal'> Summary of Professional Experience </span>
           <hr className='w-1/2 mt-2' />
         </MobileSection>
 
@@ -148,7 +151,7 @@ export default function ResumeMobile({
         {/* Section Header */}
         <MobileSection>
           <hr className='w-1/2 pb-2' />
-            <span className='w-full font-normal'> Professional Reference </span>
+          <span className='w-full font-normal'> Professional Reference </span>
           <hr className='w-1/2 mt-2' />
         </MobileSection>
 
@@ -166,7 +169,7 @@ export default function ResumeMobile({
             <p className='w-fit'>
               If you have any further questions or would like to know more,
               <a
-                style={{ color: '#01AD4C' }}
+                style={{ color: accentColor }}
                 className='w-fit pl-1 font-normal'
                 href="sms:+4369981948346"
               >
