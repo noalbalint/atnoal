@@ -3,7 +3,13 @@ import styled from 'styled-components';
 
 // Adapted from https://codepen.io/dmistry485/pen/RqwJJE and heavily modified
 export default function ScrollLine(
-  { distanceToScroll, marginLeft }: { distanceToScroll: number, marginLeft?: string }
+  {
+    distanceToScroll,
+    marginLeft,
+  }: {
+    distanceToScroll: number,
+    marginLeft?: string,
+  }
 ): React.ReactElement {
   useEffect(() => {
     // Get a reference to the <path>
