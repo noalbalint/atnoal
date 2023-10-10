@@ -222,7 +222,7 @@ export function Resume({
               title="Echosec Systems - Junior Frontend Developer"
               subtexts={[
                 "Ownership of small frontend bugs and features, completed with some guidance from mentors",
-                "Improve load time by 200%+ through preloading, lazyloading, code splitting",
+                "Improve load time by 200%+ through preloading, lazyloading, and code splitting",
                 "Top contributor in pull request reviews"
               ]}
             />

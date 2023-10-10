@@ -34,9 +34,9 @@ export default function LogoSection(): React.ReactElement {
   useEffect(() => {
     emphasizeLogoTimeout('html', 5800);
     emphasizeLogoTimeout('css', 6000);
-    emphasizeLogoTimeout('php', 6200);
-    emphasizeLogoTimeout('javascript', 6400);
-    emphasizeLogoTimeout('ajax', 6600);
+    emphasizeLogoTimeout('typescript', 6200);
+    emphasizeLogoTimeout('vue', 6400);
+    emphasizeLogoTimeout('figma', 6600);
   });
 
   const emphasizeLogoTimeout = async (logoName: string, timeoutMs: number) => {
@@ -70,9 +70,9 @@ export default function LogoSection(): React.ReactElement {
         <StyledImg src={typescriptLogo} />
         <StyledImg src={javascriptLogo} />
         <StyledImg src={vueLogo} />
-        <StyledImg src={cypressLogo} />
         <StyledImg src={ajaxLogo} style={{ width: '5.5rem' }} />
         <StyledImg src={figmaLogo} style={{ width: '2.5rem' }} />
+        <StyledImg src={cypressLogo} />
       </div>
     </>
   )

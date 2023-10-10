@@ -125,7 +125,7 @@ export default function ResumeMobile({
             title="Echosec Systems - Junior Frontend Developer"
             subtexts={[
               "Ownership of small frontend bugs and features, completed with some guidance from mentors",
-              "Improve load time by 200%+ through preloading, lazyloading, code splitting",
+              "Improve load time by 200%+ through preloading, lazyloading, and code splitting",
               "Top contributor in pull request reviews"
             ]}
           />
@@ -143,7 +143,7 @@ export default function ResumeMobile({
             title={`${companyName} - Intermediate Frontend Developer (?)`}
             subtexts={[
               "Apply skills from previous roles to a new codebase and problem domain",
-              "Do a really good job and make users happy :)"
+              "Do a really good job and make everybody happy :)"
             ]}
           />
         </MobileSection>
