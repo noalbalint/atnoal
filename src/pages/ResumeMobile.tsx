@@ -169,7 +169,7 @@ export default function ResumeMobile({
         <MobileSection className='mb-8 flex flex-col'>
           <div className='flex font-normal text-xl'>
             <p className='w-fit'>
-              If you have any further questions or would like to know more,
+            If you have any further questions or would like to discuss an employment opportunity,
               <a
                 style={{ color: accentColor }}
                 className='w-fit pl-1 font-normal'

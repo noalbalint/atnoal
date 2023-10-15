@@ -264,14 +264,14 @@ export function Resume({
         {/* Outro */}
         <HorizontalSection className='mb-24 pb-8 px-36 flex flex-col'>
           <p className='w-fit'>
-            If you have any questions or would like to know more, just
+            If you have any further questions or would like to discuss an employment opportunity,
             <a
               style={{ color: accentColor }}
               className='w-fit pl-1 font-normal'
               href={`mailto:noalbalint@gmail.com?subject=Re: ${companyName} Application`}
               target='_blank'
             >
-              say hello!
+              let's talk!
             </a>
           </p>
         </HorizontalSection>
