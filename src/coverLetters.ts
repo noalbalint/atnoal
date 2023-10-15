@@ -8,22 +8,11 @@ export const velofood = [
 ];
 
 export const capito = [
-  `I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps using Webpack, TypeScript, Vue.js and Less.js.`,
+  `I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps using Webpack, TypeScript, Vue.js and Less CSS.
+  I love converting complicated problems into intuitive interfaces and delightful user experiences.`,
   `Originally from Canada, I have permanently relocated to Graz to be with my Austrian partner.
   In the search for a local job, Capito's socially-impactful product and benevolent employment policies really stood out to me.
-  Using technology to reduce barriers to information could be the key to fighting misinformation and polarization in our society -
-  it is a very interesting problem, and something I would be proud to work on.`,
-  `To demonstrate my ability to quickly learn new technologies, I chose to build this website with a tech stack that is completely new to me: Vite, Firebase, React, Styled Components, and Tailwind CSS.
-  Regardless of what technologies you are currently using, I'm confident that I can quickly become a productive member of the Capito team!`,
-];
-
-
-export const parkside = [
-  `I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps using TypeScript, Vue.js and Less.js.`,
-  `Originally from Canada, I have permanently relocated to Graz to be with my Austrian partner.
-  In the search for a local job, Capito's socially-impactful product and benevolent employment policies really stood out to me.
-  Using technology to reduce barriers to information could be the key to fighting misinformation and polarization in our society -
-  it is a very interesting problem, and something I would be proud to work on.`,
+  I would be proud to help develop a tool that reduces barriers to information and contributes to a more informed, equitable society.`,
   `To demonstrate my ability to quickly learn new technologies, I chose to build this website with a tech stack that is completely new to me: Vite, Firebase, React, Styled Components, and Tailwind CSS.
   Regardless of what technologies you are currently using, I'm confident that I can quickly become a productive member of the Capito team!`,
 ];
