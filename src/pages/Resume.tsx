@@ -223,6 +223,7 @@ export function Resume({
               subtexts={[
                 "Ownership of small frontend bugs and features, completed with some guidance from mentors",
                 "Improve load time by 200%+ through preloading, lazyloading, and code splitting",
+                "Work asynchronously with team members in different timezones",
                 "Top contributor in pull request reviews"
               ]}
             />
@@ -231,8 +232,7 @@ export function Resume({
               title="Echosec Systems - Intermediate Frontend Developer"
               subtexts={[
                 "Lead multiple fullstack features: translate product requirements into Figma mockups and API schema, then implement alongside interdisciplenary team members, and communicate status updates to stakeholders",
-                "Core contributor of world-class digital threat intelligence product, acquired for +$100M",
-                "Become #3 overall code contributor, after CTO and principle engineer",
+                "Core contributor (#4 by code lines count) to world-class digital threat intelligence product, acquired for +$100M",
                 "Participate in customer calls and demos as a technical expert",
               ]}
             />
