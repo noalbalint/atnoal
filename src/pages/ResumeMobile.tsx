@@ -22,6 +22,9 @@ function TimelineItem(
   )
 }
 
+/**
+ * TODO: DRY up the copy so it doesn't need to be maintained in two places
+ */
 export default function ResumeMobile({
   companyName,
   coverLetter,
@@ -40,12 +43,12 @@ export default function ResumeMobile({
           <span
             className='text-left text-4xl self-start pb-1'
           >
-            Eure Verstärkung in der Technik
+            Noal Balint - Frontend Developer
           </span>
           <i
             className='text-left text-2xl self-start pb-2'
           >
-            Application to {companyName}, <br /> Noal Balint
+            Application to {companyName}
           </i>
         </MobileSection>
 
@@ -118,7 +121,7 @@ export default function ResumeMobile({
             title="Echosec Systems - Student Intern"
             subtexts={[
               "Pair-programming with seniors to build foundational knowledge of HTML, CSS, Javascript, TypeScript, and Vue",
-              "Participate in agile scrum ceremonies: standups, retros, and sprint planning",
+              "Participate in scrum ceremonies: standups, retros, and sprint planning",
             ]}
           />
           <TimelineItem
@@ -126,7 +129,7 @@ export default function ResumeMobile({
             subtexts={[
               "Ownership of small frontend bugs and features, completed with some guidance from mentors",
               "Improve load time by 200%+ through preloading, lazyloading, and code splitting",
-              "Work asynchronously with team members in different timezones",
+              "Work asynchronously with global team across multiple timezones",
               "Top contributor in pull request reviews"
             ]}
           />

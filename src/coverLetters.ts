@@ -16,3 +16,13 @@ export const capito = [
   `To demonstrate my ability to quickly learn new technologies, I chose to build this website with a tech stack that is completely new to me: Vite, Firebase, React, Styled Components, and Tailwind CSS.
   Regardless of what technologies you are currently using, I'm confident that I can quickly become a productive member of the Capito team!`,
 ];
+
+export const parkside = [
+  `I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps using Webpack, TypeScript, Vue.js and Less CSS.
+  I love converting complicated problems into intuitive interfaces and delightful user experiences.`,
+  `Originally from Canada, I have permanently relocated to Graz to be with my Austrian partner.
+  After 3 years of working remotely and 4+ years in the same codebase, Parkside's Graz-based HQ and diverse product portfolio is exactly the change I have been looking for.`,
+  `To demonstrate my ability to quickly learn new tools, I chose to build this website with a tech stack that is completely new to me: Vite, React, Styled Components, and Tailwind CSS.`,
+  `Polishing and tweaking is my favorite part of the job, and your motto of "it's done, never finished" deeply resonates with me.
+  It would be a great pleasure to join your team, in any capacity.`,
+];

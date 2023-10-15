@@ -6,6 +6,9 @@ import DrawLine from '../components/DrawLine'
 import LogoSection from '../components/LogoSection';
 import BlockQuote from '../components/BlockQuote';
 
+/**
+ * TODO: Move all other components to their own files
+ */
 function TimelineItem(
   { title, subtexts, circleSlot }: { title: string, subtexts: string[], circleSlot: React.ReactNode }
 ): React.ReactElement {
@@ -74,7 +77,6 @@ export function Resume({
       color: #fff;
     }
   `;
-
 
   const Link = styled.a`
     color: ${accentColor};
@@ -164,12 +166,12 @@ export function Resume({
             <span
               className='text-left text-4xl self-start pb-4'
             >
-              Eure Verstärkung in der Technik
+              Noal Balint - Frontend Developer
             </span>
             <i
               className='text-left text-2xl self-start pb-8'
             >
-              Application to {companyName} - Noal Balint
+              Application to {companyName}
             </i>
             {/* Cover Letter */}
             {coverLetter.map((text: string, index: number) => (
@@ -214,7 +216,7 @@ export function Resume({
               title="Echosec Systems - Student Intern"
               subtexts={[
                 "Pair-programming with seniors to build foundational knowledge of HTML, CSS, JavaScript, TypeScript, and Vue.js",
-                "Participate in agile scrum ceremonies: standups, retros, and sprint planning",
+                "Participate scrum ceremonies: standups, retros, and sprint planning",
               ]}
             />
             <TimelineItem
@@ -223,7 +225,7 @@ export function Resume({
               subtexts={[
                 "Ownership of small frontend bugs and features, completed with some guidance from mentors",
                 "Improve load time by 200%+ through preloading, lazyloading, and code splitting",
-                "Work asynchronously with team members in different timezones",
+                "Work asynchronously with global team across multiple timezones",
                 "Top contributor in pull request reviews"
               ]}
             />
@@ -286,6 +288,7 @@ const HorizontalSection = styled.div`
   display: flex;
   align-items: center;
   background-color: #F8FAFC;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 `;
 
 const VerticalSectionLeftThird = styled.div`

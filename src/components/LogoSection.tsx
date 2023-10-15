@@ -11,7 +11,7 @@ import lessLogo from '@/assets/lessLogo.png'
 import reactLogo from '@/assets/reactLogo.png'
 import phpLogo from '@/assets/phpLogo.png'
 import typescriptLogo from '@/assets/typescriptLogo.png'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 const StyledImg = styled.img`
@@ -31,13 +31,26 @@ const StyledImg = styled.img`
 `;
 
 export default function LogoSection(): React.ReactElement {
+  const [hasScrolled, setHasScrolled] = useState(false);
+
   useEffect(() => {
-    emphasizeLogoTimeout('html', 5800);
-    emphasizeLogoTimeout('css', 6000);
-    emphasizeLogoTimeout('typescript', 6200);
-    emphasizeLogoTimeout('vue', 6400);
-    emphasizeLogoTimeout('figma', 6600);
-  });
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [hasScrolled]);
+
+  const handleScroll = () => {
+    if (!hasScrolled) {
+      setHasScrolled(true);
+      emphasizeLogoTimeout('html', 200);
+      emphasizeLogoTimeout('css', 400);
+      emphasizeLogoTimeout('typescript', 600);
+      emphasizeLogoTimeout('vue', 800);
+      emphasizeLogoTimeout('cypress', 1000);
+    }
+  };
 
   const emphasizeLogoTimeout = async (logoName: string, timeoutMs: number) => {
     await new Promise(r => setTimeout(r, timeoutMs));
@@ -71,8 +84,8 @@ export default function LogoSection(): React.ReactElement {
         <StyledImg src={javascriptLogo} />
         <StyledImg src={vueLogo} />
         <StyledImg src={ajaxLogo} style={{ width: '5.5rem' }} />
-        <StyledImg src={figmaLogo} style={{ width: '2.5rem' }} />
         <StyledImg src={cypressLogo} />
+        <StyledImg src={figmaLogo} style={{ width: '2.5rem' }} />
       </div>
     </>
   )
