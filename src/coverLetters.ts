@@ -1,3 +1,8 @@
+/**
+ * TODO
+ */
+export const general = []
+
 export const velofood = [
   `I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps using HTML, CSS, PHP,
   Ajax, and JavaScript. I believe that my background would be an excellent fit for your open "Verstärkung in der Technik" position.`,
@@ -8,7 +13,7 @@ export const velofood = [
 ];
 
 export const capito = [
-  `I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps using Webpack, TypeScript, Vue.js and Less CSS.
+  `I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps using primarily TypeScript, Vue.js, and Less CSS.
   I love converting complicated problems into intuitive interfaces and delightful user experiences.`,
   `Originally from Canada, I have permanently relocated to Graz to be with my Austrian partner.
   In the search for a local job, Capito's socially-impactful product and benevolent employment policies really stood out to me.
@@ -18,7 +23,7 @@ export const capito = [
 ];
 
 export const parkside = [
-  `I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps using Webpack, TypeScript, Vue.js and Less CSS.
+  `I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps using primarily TypeScript, Vue.js, and Less CSS.
   I love converting complicated problems into intuitive interfaces and delightful user experiences.`,
   `Originally from Canada, I have permanently relocated to Graz to be with my Austrian partner.
   After 3 years of working remotely and 4+ years in the same codebase, Parkside's Graz-based HQ and diverse product portfolio is exactly the change I have been looking for.`,
