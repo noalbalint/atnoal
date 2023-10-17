@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
+const StyledSVG = styled.svg<{ height: number; }>`
+  position: absolute;
+  height: ${props => props.height}px;
+`;
+
 // Adapted from https://codepen.io/dmistry485/pen/RqwJJE and heavily modified
 export default function ScrollLine(
   {
@@ -35,14 +40,10 @@ export default function ScrollLine(
     });
   }, []);
 
-  const StyledSVG = styled.svg`
-    position: absolute;
-    height: ${distanceToScroll}px;
-  `;
-
   return (
     <div style={{ marginLeft: `${marginLeft}` }}>
       <StyledSVG
+        height={distanceToScroll}
         className='mt-3'
         id='line-svg'
         version="1.1"

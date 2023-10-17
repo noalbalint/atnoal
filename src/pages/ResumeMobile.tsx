@@ -12,8 +12,8 @@ function TimelineItem(
         <div>
           <p className='font-medium text-left pb-2'>{title}</p>
           <ul style={{ listStyleType: 'disc' }} className='pl-6'>
-            {subtexts.map((subtext) => (
-              <li className='pl-1 text-left pb-1'>{subtext}</li>
+            {subtexts.map((subtext, index) => (
+              <li key={index} className='pl-1 text-left pb-1'>{subtext}</li>
             ))}
           </ul>
         </div>

@@ -19,8 +19,8 @@ function TimelineItem(
         <div className='pl-16'>
           <p className='font-medium text-left pb-2'>{title}</p>
           <ul style={{ listStyleType: 'disc' }} className='pl-6'>
-            {subtexts.map((subtext) => (
-              <li className='pl-1 text-left pb-1'>{subtext}</li>
+            {subtexts.map((subtext, index) => (
+              <li key={index} className='pl-1 text-left pb-1'>{subtext}</li>
             ))}
           </ul>
         </div>
@@ -42,12 +42,12 @@ function TimelineDate(
 
 export function Resume({
   companyName,
-  accentColor,
   coverLetter,
+  accentColor,
 }: {
   companyName: string,
-  accentColor: string,
   coverLetter: string[],
+  accentColor: string,
 }): React.ReactElement {
   const [drawLineLength, setdrawLineLength] = useState<number | null>(null);
 
@@ -262,7 +262,7 @@ export function Resume({
   )
 }
 
-const MainContainer = styled.div<{ color?: string; }>`
+const MainContainer = styled.div<{ color: string; }>`
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -271,17 +271,17 @@ align-self: center;
 line-height: 1.9rem;
 
 ::selection {
-    background-color: ${props => props.color || "#b9b9b9"};;
+    background-color: ${props => props.color};
   color: #fff;
 }
 `;
 
-const Link = styled.a<{ color?: string; }>`
-color: ${props => props.color || "#b9b9b9"};;
+const Link = styled.a<{ color: string; }>`
+color: ${props => props.color};
 font-weight: 400;
 
 &:hover {
-  color: ${props => props.color || "#b9b9b9"};;
+  color: ${props => props.color};
 }
 `;
 
