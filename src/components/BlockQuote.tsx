@@ -20,10 +20,9 @@ export default function BlockQuote({
         <a
           href="https://www.linkedin.com/in/joan-orrit-palau/"
           target='_blank'
-          style={{ color }}
-          className='absolute bottom-4 right-36'
+          style={{ color, marginLeft: '1rem' }}
         >
-          - Joan P. (Backend Engineer)
+          - Joan Orrit Palau
         </a>
       </p>
       <img className='absolute bottom-0 right-32 w-32 opacity-10 font-medium' src={quoteClose} />
