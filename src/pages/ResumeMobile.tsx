@@ -178,7 +178,7 @@ export default function ResumeMobile({
                 className='w-fit pl-1 font-normal'
                 href="sms:+4369981948346"
               >
-                say hello!
+                let's talk!
               </a>
             </p>
           </div>

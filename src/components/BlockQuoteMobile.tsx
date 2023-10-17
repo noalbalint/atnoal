@@ -25,7 +25,7 @@ export default function BlockQuote({
           style={{ color, }}
           className='pt-4'
         >
-          - Joan P. (Backend Engineer)
+          - Joan Orrit Palau
         </a>
     </>
   )
