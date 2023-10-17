@@ -38,7 +38,7 @@ const router = createBrowserRouter([
     element: <ResumeWrapper
       companyName='Parkside Interactive'
       coverLetter={parkside}
-      accentColor='#007ACC'
+      accentColor='#000FFF'
     />,
   },
 ]);

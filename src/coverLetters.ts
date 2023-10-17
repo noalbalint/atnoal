@@ -23,7 +23,7 @@ export const capito = [
 ];
 
 export const parkside = [
-  `I am a frontend designer-developer with over 4 years of professional experience building enterprise-grade dynamic web apps using primarily TypeScript, Vue.js, and Less CSS.
+  `I am a frontend developer with over 4 years of professional experience building enterprise-grade dynamic web apps using primarily TypeScript, Vue.js, and Less CSS.
   I love converting complicated problems into intuitive interfaces and delightful user experiences.`,
   `Originally from Canada, I have permanently relocated to Graz to be with my Austrian partner.
   After 3 years of working remotely and 4+ years in the same codebase, Parkside's Graz-based HQ and diverse product portfolio is exactly the change I have been looking for.`,

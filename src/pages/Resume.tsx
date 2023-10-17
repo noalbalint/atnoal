@@ -288,7 +288,7 @@ const HorizontalSection = styled.div`
   display: flex;
   align-items: center;
   background-color: #F8FAFC;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 `;
 
 const VerticalSectionLeftThird = styled.div`
