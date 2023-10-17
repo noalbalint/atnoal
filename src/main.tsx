@@ -4,7 +4,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { velofood, capito, parkside } from './coverLetters';
+import { velofood, capito, parkside, grazGeneral } from './coverLetters';
 import './index.css'
 import './tailwind.css'
 import Home from './pages/Home'
@@ -39,6 +39,12 @@ const router = createBrowserRouter([
       companyName='Parkside Interactive'
       coverLetter={parkside}
       accentColor='#307cc4'
+    />,
+  },
+  {
+    path: "/for-hire",
+    element: <ResumeWrapper
+      coverLetter={grazGeneral}
     />,
   },
 ]);

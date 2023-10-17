@@ -30,7 +30,7 @@ export default function ResumeMobile({
   coverLetter,
   accentColor,
 }: {
-  companyName: string,
+  companyName?: string,
   coverLetter: string[],
   accentColor: string,
 }
@@ -40,16 +40,15 @@ export default function ResumeMobile({
       <div className='flex flex-col w-full mt-8 max-w-md'>
         {/* Header */}
         <MobileSection>
-          <span
-            className='text-left text-4xl self-start pb-1'
-          >
+          <span className='text-left text-4xl self-start pb-1'>
             Noal Balint - Frontend Developer
           </span>
-          <i
-            className='text-left text-2xl self-start pb-2'
-          >
-            Application to {companyName}
-          </i>
+          {
+            companyName &&
+            <i className='text-left text-2xl self-start pb-2'>
+              Application to {companyName}
+            </i>
+          }
         </MobileSection>
 
         {/* About */}
@@ -143,7 +142,7 @@ export default function ResumeMobile({
           />
           {/* TODO: it would be cool if when the line hit this point, it would turn another color and make a confetti or something */}
           <TimelineItem
-            title={`${companyName} - Intermediate Frontend Developer (?)`}
+            title={`${companyName ?? 'Your Company'} - Intermediate Frontend Developer (?)`}
             subtexts={[
               "Apply skills from previous roles to a new codebase and problem domain",
               "Do a really good job and make everybody happy :)"
@@ -170,9 +169,9 @@ export default function ResumeMobile({
 
         {/* Outro */}
         <MobileSection className='mb-8 flex flex-col'>
-          <div className='flex font-normal text-xl'>
+          <div className='flex font-normal'>
             <p className='w-fit'>
-            If you have any further questions or would like to discuss an employment opportunity,
+            If you have an employment opportunity to discuss or would like to know more about me,
               <a
                 style={{ color: accentColor }}
                 className='w-fit pl-1 font-normal'

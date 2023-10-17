@@ -9,7 +9,7 @@ export default function ResumeWrapper({
   coverLetter,
   accentColor = DEFAULT_ACCENT_COLOR,
 }: {
-  companyName: string,
+  companyName?: string,
   coverLetter: string[],
   accentColor?: string,
 }): React.ReactElement {

@@ -45,7 +45,7 @@ export function Resume({
   coverLetter,
   accentColor,
 }: {
-  companyName: string,
+  companyName?: string,
   coverLetter: string[],
   accentColor: string,
 }): React.ReactElement {
@@ -140,18 +140,18 @@ export function Resume({
             </div>
           </VerticalSectionLeftThird>
 
-          {/* Cover Letter */}
+          {/* Header */}
           <VerticalSectionRightTwoThird className='items-center pt-0'>
-            <span
-              className='text-left text-4xl self-start pb-4'
-            >
+            <span className='text-left text-4xl self-start pb-4'>
               Noal Balint - Frontend Developer
             </span>
-            <i
-              className='text-left text-2xl self-start pb-8'
-            >
-              Application to {companyName}
-            </i>
+            {
+              companyName ?
+              <i className='text-left text-2xl self-start pb-8'>
+                Application to {companyName}
+              </i>
+              : <div className='mt-2' />
+            }
             {/* Cover Letter */}
             {coverLetter.map((text: string, index: number) => (
               <Paragraph key={index}>{text}</Paragraph>
@@ -167,14 +167,14 @@ export function Resume({
         </HorizontalSection>
 
         {/* Section Header */}
-        <HorizontalSection className='justify-center pt-8 pb-16'>
+        <HorizontalSection className='justify-center pt-10 pb-16'>
           <Line className='w-72' />
           <span className='w-58 font-normal'> Summary of Professional Experience </span>
           <Line className='w-72' />
         </HorizontalSection>
 
         {/* Professional Experience Timeline */}
-        <HorizontalSection className=' pl-32 pr-16 pb-10 justify-center'>
+        <HorizontalSection className=' pl-32 pr-16 pb-8 justify-center'>
           <div className='flex flex-col'>
             {drawLineLength && (
               <DrawLine
@@ -219,12 +219,12 @@ export function Resume({
             />
             {/* TODO: it would be cool if when the line hit this point, it would turn another color and make a confetti or something */}
             <TimelineItem
-              circleSlot={<TimelineDate id='last-circle' year='2023'/>}
-              title={`${companyName} - Intermediate Frontend Developer (?)`}
-              subtexts={[
-                "Apply skills from previous roles to a new codebase and problem domain",
-                "Do a really good job and make everybody happy :)"
-              ]}
+            circleSlot={<TimelineDate id='last-circle' year='2023'/>}
+            title={`${companyName ?? 'Your Company'} - Intermediate Frontend Developer (?)`}
+            subtexts={[
+              "Apply skills from previous roles to a new codebase and problem domain",
+              "Do a really good job and make everybody happy :)"
+            ]}
             />
           </div>
         </HorizontalSection>
@@ -233,7 +233,7 @@ export function Resume({
         <HorizontalSection className='flex flex-col'>
           <BlockQuote
             color={accentColor}
-            className='w-full h-72'
+            className='w-full'
           />
         </HorizontalSection>
 
@@ -245,11 +245,11 @@ export function Resume({
         {/* Outro */}
         <HorizontalSection className='mb-24 pb-8 px-36 flex flex-col'>
           <p className='w-fit'>
-            If you have any further questions or would like to discuss an employment opportunity,
+            If you have an employment opportunity to discuss or would like to know more about me,
             <a
               style={{ color: accentColor }}
               className='w-fit pl-1 font-normal'
-              href={`mailto:noalbalint@gmail.com?subject=Re: ${companyName} Application`}
+              href={`mailto:noalbalint@gmail.com?subject=Re: ${companyName ?? 'Frontend Developer'} Application`}
               target='_blank'
             >
               let's talk!
