@@ -64,29 +64,6 @@ export function Resume({
     setdrawLineLength(lastCircle?.getBoundingClientRect().top - firstCircle.getBoundingClientRect().top);
   }, []);
 
-  const MainContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: 300;
-    align-self: center;
-    line-height: 1.9rem;
-
-    ::selection {
-        background-color: ${accentColor};
-      color: #fff;
-    }
-  `;
-
-  const Link = styled.a`
-    color: ${accentColor};
-    font-weight: 500;
-
-    &:hover {
-      color: ${accentColor};
-    }
-  `;
-
   // Remove the hash (#) if it's present
   const hex = accentColor.replace(/^#/, '');
 
@@ -103,7 +80,7 @@ export function Resume({
         outerSize={10}
         color={`${r}, ${g}, ${b}`}
       />
-      <MainContainer>
+      <MainContainer color={accentColor} >
         <HorizontalSection className='mt-16 pt-8 px-8'>
           <VerticalSectionLeftThird>
             {/* Photo */}
@@ -123,6 +100,7 @@ export function Resume({
             {/* Linkedin */}
             <div className="inline-flex pt-1.5">
               <Link
+                color={accentColor}
                 href='https://www.linkedin.com/in/noal-balint-91083510b/'
                 target='_blank'
               >
@@ -132,6 +110,7 @@ export function Resume({
             {/* Github */}
             <div className="inline-flex pt-1.5">
               <Link
+                color={accentColor}
                 href='https://github.com/noalbalint/atnoal'
                 target='_blank'
               >
@@ -142,21 +121,21 @@ export function Resume({
             <div className='flex flex-row justify-between items-center pt-2'>
               <span style={{ marginRight: '14px' }}>German</span>
               <div className='flex'>
-                <Circle className='mr-1' />
-                <Circle className='mr-1' />
-                <OutlinedCircle className='mr-1' />
-                <OutlinedCircle className='mr-1' />
-                <OutlinedCircle className='mr-1' />
+                <Circle className='mr-1' color={accentColor}  />
+                <Circle className='mr-1' color={accentColor} />
+                <OutlinedCircle className='mr-1' color={accentColor} />
+                <OutlinedCircle className='mr-1' color={accentColor} />
+                <OutlinedCircle className='mr-1' color={accentColor} />
               </div>
             </div>
             <div className='flex flex-row justify-between items-center pt-2'>
               <span style={{ marginRight: '21px' }}>English</span>
               <div className='flex'>
-                <Circle className='mr-1' />
-                <Circle className='mr-1' />
-                <Circle className='mr-1' />
-                <Circle className='mr-1' />
-                <Circle className='mr-1' />
+                <Circle className='mr-1' color={accentColor} />
+                <Circle className='mr-1' color={accentColor} />
+                <Circle className='mr-1' color={accentColor} />
+                <Circle className='mr-1' color={accentColor} />
+                <Circle className='mr-1' color={accentColor} />
               </div>
             </div>
           </VerticalSectionLeftThird>
@@ -204,7 +183,7 @@ export function Resume({
               />
             )}
             <TimelineItem
-              circleSlot={<Circle id='first-circle' className='ml-14' />}
+              circleSlot={<Circle id='first-circle' className='ml-14'/>}
               title="Early Career"
               subtexts={[
                 "Various customer-facing roles in restaurants, surf shops, and film sets",
@@ -212,7 +191,7 @@ export function Resume({
               ]}
             />
             <TimelineItem
-              circleSlot={<TimelineDate year='2019' />}
+              circleSlot={<TimelineDate year='2019'/>}
               title="Echosec Systems - Student Intern"
               subtexts={[
                 "Pair-programming with seniors to build foundational knowledge of HTML, CSS, JavaScript, TypeScript, and Vue.js",
@@ -220,7 +199,7 @@ export function Resume({
               ]}
             />
             <TimelineItem
-              circleSlot={<TimelineDate year='2020' />}
+              circleSlot={<TimelineDate year='2020'/>}
               title="Echosec Systems - Junior Frontend Developer"
               subtexts={[
                 "Ownership of small frontend bugs and features, completed with some guidance from mentors",
@@ -230,7 +209,7 @@ export function Resume({
               ]}
             />
             <TimelineItem
-              circleSlot={<TimelineDate year='2021' />}
+              circleSlot={<TimelineDate year='2021'/>}
               title="Echosec Systems - Intermediate Frontend Developer"
               subtexts={[
                 "Lead multiple fullstack features: translate product requirements into Figma mockups and API schema, then implement alongside interdisciplenary team members, and communicate status updates to stakeholders",
@@ -240,7 +219,7 @@ export function Resume({
             />
             {/* TODO: it would be cool if when the line hit this point, it would turn another color and make a confetti or something */}
             <TimelineItem
-              circleSlot={<TimelineDate id='last-circle' year='2023' />}
+              circleSlot={<TimelineDate id='last-circle' year='2023'/>}
               title={`${companyName} - Intermediate Frontend Developer (?)`}
               subtexts={[
                 "Apply skills from previous roles to a new codebase and problem domain",
@@ -283,6 +262,29 @@ export function Resume({
   )
 }
 
+const MainContainer = styled.div<{ color?: string; }>`
+display: flex;
+flex-direction: column;
+align-items: center;
+font-weight: 300;
+align-self: center;
+line-height: 1.9rem;
+
+::selection {
+    background-color: ${props => props.color || "#b9b9b9"};;
+  color: #fff;
+}
+`;
+
+const Link = styled.a<{ color?: string; }>`
+color: ${props => props.color || "#b9b9b9"};;
+font-weight: 400;
+
+&:hover {
+  color: ${props => props.color || "#b9b9b9"};;
+}
+`;
+
 const HorizontalSection = styled.div`
   width: 1300px;
   display: flex;
@@ -315,23 +317,23 @@ const Paragraph = styled.div`
   margin-bottom: 12px;
 `;
 
-const Circle = styled.div`
+const Circle = styled.div<{ color?: string; }>`
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #b9b9b9;
+  background-color: ${props => props.color || "#b9b9b9"};
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: ${props => props.color || "#b9b9b9"};
   font-size: 20px;
 `;
 
-const OutlinedCircle = styled.div`
+const OutlinedCircle = styled.div<{ color?: string; }>`
   width: 21px;
   height: 21px;
   border-radius: 50%;
-  border: 1px solid #b9b9b9;
+  border: 1px solid ${props => props.color || "#b9b9b9"};
   display: flex;
   justify-content: center;
   align-items: center;
