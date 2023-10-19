@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import DrawLine from '../components/DrawLine'
 import LogoSection from '../components/LogoSection';
 import BlockQuote from '../components/BlockQuote';
+import Link from '@/components/styled/Link';
 
 /**
  * TODO: Move all other components to their own files
@@ -243,18 +244,17 @@ export function Resume({
         </HorizontalSection>
 
         {/* Outro */}
-        <HorizontalSection className='mb-24 pb-8 px-36 flex flex-col'>
-          <p className='w-fit'>
+        <HorizontalSection className='mb-24 pb-8 px-36 flex justify-center'>
+          <p className='w-fit pr-1'>
             If you have an employment opportunity to discuss or would like to know more about me,
-            <a
-              style={{ color: accentColor }}
-              className='w-fit pl-1 font-normal'
-              href={`mailto:noalbalint@gmail.com?subject=Re: ${companyName ?? 'Frontend Developer'} Application`}
-              target='_blank'
-            >
-              let's talk!
-            </a>
           </p>
+          <Link
+            color={accentColor}
+            href={`mailto:noalbalint@gmail.com?subject=Re: ${companyName ?? 'Frontend Developer'} Application`}
+            target='_blank'
+          >
+            let's talk!
+          </Link>
         </HorizontalSection>
       </MainContainer>
       <div className='pb-72' />
@@ -273,15 +273,6 @@ line-height: 1.9rem;
 ::selection {
     background-color: ${props => props.color};
   color: #fff;
-}
-`;
-
-const Link = styled.a<{ color: string; }>`
-color: ${props => props.color};
-font-weight: 400;
-
-&:hover {
-  color: ${props => props.color};
 }
 `;
 

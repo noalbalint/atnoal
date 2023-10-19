@@ -1,5 +1,6 @@
 import quoteOpen from '../assets/quoteOpen.svg'
 import quoteClose from '../assets/quoteClose.svg'
+import Link from '@/components/styled/Link'
 
 // TODO: Make this reusable/generic
 export default function BlockQuote({
@@ -10,6 +11,7 @@ export default function BlockQuote({
   className?: string
 }) {
   return (
+    <>
     <div className={`${className} relative`}>
       <img className='absolute top-0 left-32 w-32 opacity-10' src={quoteOpen} />
        <p className='text-left pt-6 pb-2 px-36'>
@@ -19,13 +21,14 @@ export default function BlockQuote({
         I would be glad to work with him again if the opportunity arises.
       </p>
       <img className='absolute bottom-0 right-32 w-32 opacity-10 font-medium' src={quoteClose} />
-      <a
-          href="https://www.linkedin.com/in/joan-orrit-palau/"
-          target='_blank'
-          style={{ color }}
-        >
-          - Joan Orrit Palau
-      </a>
     </div>
+    <Link
+        href="https://www.linkedin.com/in/joan-orrit-palau/"
+        target='_blank'
+        color={color}
+        >
+        - Joan Orrit Palau
+    </Link>
+    </>
   )
 }
