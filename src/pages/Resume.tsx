@@ -94,15 +94,15 @@ export function Resume({
               alt="the applicant"
             />
             {/* Email */}
-            <div className="inline-flex pt-1.5 w-full">
+            <div className="inline-flex pt-2 w-full">
               <span className='w-full'>noalbalint@gmail.com</span>
             </div>
             {/* Phone */}
-            <div className="inline-flex pt-1.5 w-full">
+            <div className="inline-flex pt-2 w-full">
               <span className='w-full'>+43 699 819 483 46</span>
             </div>
             {/* Linkedin */}
-            <div className="inline-flex pt-1.5">
+            <div className="inline-flex pt-2">
               <Link
                 color={accentColor}
                 href='https://www.linkedin.com/in/noal-balint-91083510b/'
@@ -112,7 +112,7 @@ export function Resume({
               </Link>
             </div>
             {/* Github */}
-            <div className="inline-flex pt-1.5">
+            <div className="inline-flex pt-2">
               <Link
                 color={accentColor}
                 href='https://github.com/noalbalint/atnoal'
@@ -271,7 +271,7 @@ const MainContainer = styled.div<{ color: string; }>`
   align-items: center;
   font-weight: 300;
   align-self: center;
-  line-height: 1.9rem;
+  line-height: 2rem;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 
   ::selection {

@@ -9,7 +9,7 @@ const Link = styled.a<{ color: string; }>`
     content: '';
     position: absolute;
     left: 0;
-    bottom: 1px;
+    bottom: 2px;
     width: 0;
     height: 1px;
     background-color: ${props => props.color};
