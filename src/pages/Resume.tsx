@@ -84,8 +84,8 @@ export function Resume({
         trailingSpeed={12}
         color={`${r}, ${g}, ${b}`}
       />
-      <MainContainer color={accentColor} >
-        <HorizontalSection className='mt-16 pt-8 px-8'>
+      <MainContainer color={accentColor} className='mt-16 mb-24' >
+        <HorizontalSection className='pt-8 px-8'>
           <VerticalSectionLeftThird>
             {/* Photo */}
             <img
@@ -125,7 +125,7 @@ export function Resume({
             <div className='flex flex-row justify-between items-center pt-2'>
               <span style={{ marginRight: '14px' }}>German</span>
               <div className='flex'>
-                <Circle className='mr-1' color={accentColor}  />
+                <Circle className='mr-1' color={accentColor} />
                 <Circle className='mr-1' color={accentColor} />
                 <OutlinedCircle className='mr-1' color={accentColor} />
                 <OutlinedCircle className='mr-1' color={accentColor} />
@@ -151,10 +151,10 @@ export function Resume({
             </span>
             {
               companyName ?
-              <i className='text-left text-2xl self-start pb-8'>
-                Application to {companyName}
-              </i>
-              : <div className='mt-2' />
+                <i className='text-left text-2xl self-start pb-8'>
+                  Application to {companyName}
+                </i>
+                : <div className='mt-2' />
             }
             {/* Cover Letter */}
             {coverLetter.map((text: string, index: number) => (
@@ -187,7 +187,7 @@ export function Resume({
               />
             )}
             <TimelineItem
-              circleSlot={<Circle id='first-circle' className='ml-14'/>}
+              circleSlot={<Circle id='first-circle' className='ml-14' />}
               title="Early Career"
               subtexts={[
                 "Various customer-facing roles in restaurants, surf shops, and film sets",
@@ -195,7 +195,7 @@ export function Resume({
               ]}
             />
             <TimelineItem
-              circleSlot={<TimelineDate year='2019'/>}
+              circleSlot={<TimelineDate year='2019' />}
               title="Echosec Systems - Student Intern"
               subtexts={[
                 "Pair-programming with seniors to build foundational knowledge of HTML, CSS, JavaScript, TypeScript, and Vue.js",
@@ -203,7 +203,7 @@ export function Resume({
               ]}
             />
             <TimelineItem
-              circleSlot={<TimelineDate year='2020'/>}
+              circleSlot={<TimelineDate year='2020' />}
               title="Echosec Systems - Junior Frontend Developer"
               subtexts={[
                 "Ownership of small frontend bugs and features, completed with some guidance from mentors",
@@ -213,7 +213,7 @@ export function Resume({
               ]}
             />
             <TimelineItem
-              circleSlot={<TimelineDate year='2021'/>}
+              circleSlot={<TimelineDate year='2021' />}
               title="Echosec Systems - Intermediate Frontend Developer"
               subtexts={[
                 "Lead multiple fullstack features: translate product requirements into Figma mockups and API schema, then implement alongside interdisciplenary team members, and communicate status updates to stakeholders",
@@ -223,12 +223,12 @@ export function Resume({
             />
             {/* TODO: it would be cool if when the line hit this point, it would turn another color and make a confetti or something */}
             <TimelineItem
-            circleSlot={<TimelineDate id='last-circle' year='2023'/>}
-            title={`${companyName ?? 'Your Company'} - Intermediate Frontend Developer (?)`}
-            subtexts={[
-              "Apply skills from previous roles to a new codebase and problem domain",
-              "Do a really good job and make everybody happy :)"
-            ]}
+              circleSlot={<TimelineDate id='last-circle' year='2023' />}
+              title={`${companyName ?? 'Your Company'} - Intermediate Frontend Developer (?)`}
+              subtexts={[
+                "Apply skills from previous roles to a new codebase and problem domain",
+                "Do a really good job and make everybody happy :)"
+              ]}
             />
           </div>
         </HorizontalSection>
@@ -247,7 +247,7 @@ export function Resume({
         </HorizontalSection>
 
         {/* Outro */}
-        <HorizontalSection className='mb-24 pb-8 px-36 flex justify-center'>
+        <HorizontalSection className='pb-8 px-36 flex justify-center'>
           <p className='w-fit pr-1'>
             If you have an employment opportunity to discuss or would like to know more about me,
           </p>
@@ -266,17 +266,18 @@ export function Resume({
 }
 
 const MainContainer = styled.div<{ color: string; }>`
-display: flex;
-flex-direction: column;
-align-items: center;
-font-weight: 300;
-align-self: center;
-line-height: 1.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 300;
+  align-self: center;
+  line-height: 1.9rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 
-::selection {
-    background-color: ${props => props.color};
-  color: #fff;
-}
+  ::selection {
+      background-color: ${props => props.color};
+    color: #fff;
+  }
 `;
 
 const HorizontalSection = styled.div`
@@ -284,7 +285,6 @@ const HorizontalSection = styled.div`
   display: flex;
   align-items: center;
   background-color: #F8FAFC;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 `;
 
 const VerticalSectionLeftThird = styled.div`
