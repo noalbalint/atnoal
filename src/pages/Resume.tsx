@@ -79,6 +79,9 @@ export function Resume({
       <AnimatedCursor
         innerSize={10}
         outerSize={10}
+        innerScale={1}
+        outerScale={1}
+        trailingSpeed={12}
         color={`${r}, ${g}, ${b}`}
       />
       <MainContainer color={accentColor} >
