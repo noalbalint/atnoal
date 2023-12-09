@@ -8,7 +8,7 @@ import { velofood, capito, parkside, grazGeneral } from './coverLetters';
 import './index.css'
 import './tailwind.css'
 import Home from './pages/Home'
-import ResumeWrapper from './pages/ResumeWrapper'
+import Resume from './pages/Resume'
 import Error404 from './pages/Error404';
 
 const router = createBrowserRouter([
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/velofood",
-    element: <ResumeWrapper
+    element: <Resume
       companyName='Velofood'
       coverLetter={velofood}
       accentColor='#01AD4C'
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/capito",
-    element: <ResumeWrapper
+    element: <Resume
       companyName='Capito'
       coverLetter={capito}
       accentColor='#C00000'
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/parkside",
-    element: <ResumeWrapper
+    element: <Resume
       companyName='Parkside Interactive'
       coverLetter={parkside}
       accentColor='#307cc4'
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/for-hire",
-    element: <ResumeWrapper
+    element: <Resume
       coverLetter={grazGeneral}
     />,
   },

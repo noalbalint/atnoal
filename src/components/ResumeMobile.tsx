@@ -1,7 +1,7 @@
 import React from 'react'
 import noal from '@/assets/noal.jpg'
 import styled from 'styled-components';
-import BlockQuoteMobile from '../components/BlockQuoteMobile';
+import BlockQuoteMobile from './BlockQuoteMobile';
 
 function TimelineItem(
   { title, subtexts }: { title: string, subtexts: string[] }
