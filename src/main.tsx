@@ -10,12 +10,17 @@ import './tailwind.css'
 import Home from './pages/Home'
 import Resume from './pages/Resume'
 import Error404 from './pages/Error404';
+import SendEmail from './pages/SendEmail';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
     errorElement: < Error404 />,
+  },
+  {
+    path: "/send-email",
+    element: <SendEmail />,
   },
   {
     path: "/velofood",
