@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 function CreateEmail(): React.ReactElement {
   return (
@@ -30,6 +31,11 @@ function CreateEmail(): React.ReactElement {
 export default function SendEmailWrapper(): React.ReactElement {
   const mailtoLink = window.location.href.match(/mailto(.*)/);
   const isMailtoLinkSet = mailtoLink !== null;
+
+  // Log event
+  const analytics = getAnalytics();
+  logEvent(analytics, 'notification_received');
+
 
   if (isMailtoLinkSet) {
     window.location.href = mailtoLink[0];
