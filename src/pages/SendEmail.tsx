@@ -1,5 +1,5 @@
 import React from 'react';
-import { getAnalytics, logEvent } from "firebase/analytics";
+import { analytics, logEvent } from "../../firebase";
 
 function CreateEmail(): React.ReactElement {
   return (
@@ -28,23 +28,32 @@ function CreateEmail(): React.ReactElement {
   )
 }
 
+declare global {
+  interface Window { gtag: any; }
+}
+
+window.gtag = window.gtag || function(...args: any[]) { (window.gtag.q = window.gtag.q || []).push(args) };
+
+const gtag = window.gtag;
+
 export default function SendEmailWrapper(): React.ReactElement {
   const mailtoLink = window.location.href.match(/mailto(.*)/);
   const isMailtoLinkSet = mailtoLink !== null;
 
-  // Log event
-  const analytics = getAnalytics();
   logEvent(analytics, 'notification_received');
-
 
   if (isMailtoLinkSet) {
     window.location.href = mailtoLink[0];
+    gtag('event', 'mail_link_opened')
+
     return (
       <div className='flex items-center justify-center text-lg'>
         <span> Opening email client... </span>
       </div>
     )
   } else {
+    gtag('event', 'creating_mail_link')
+
     if (!window.location.href.includes('?')) {
       window.location.href += '?';
     }

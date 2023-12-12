@@ -21,4 +21,9 @@ const app = initializeApp(firebaseConfig);
 
 // Analytics
 const analytics = getAnalytics(app);
-logEvent(analytics, 'notification_received');
+
+export {
+  app,
+  analytics,
+  logEvent,
+}
