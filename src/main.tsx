@@ -8,6 +8,7 @@ import { velofood, capito, parkside, grazGeneral } from './coverLetters';
 import './index.css'
 import './tailwind.css'
 import Home from './pages/Home'
+import Hannah from './pages/Hannah'
 import Resume from './pages/Resume'
 import Error404 from './pages/Error404';
 import SendEmail from './pages/SendEmail';
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
     errorElement: < Error404 />,
+  },
+  {
+    path: "/hannah",
+    element: <Hannah />,
   },
   {
     path: "/send-email",
