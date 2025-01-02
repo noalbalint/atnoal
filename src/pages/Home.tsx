@@ -16,6 +16,10 @@ export default function Home(): React.ReactElement {
           <span>email</span>
           <span>noalbalint@gmail.com</span>
         </div>
+        <div className='flex flex-row w-full justify-between'>
+          <span>social</span>
+          <a href='http://instagram.com/noal.balint'>@noal.balint</a>
+        </div>
         <div className='pb-6' />
         <Button />
       </div>
