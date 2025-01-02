@@ -20,7 +20,7 @@ export default function Home(): React.ReactElement {
           <span>social</span>
           <a href='http://instagram.com/noal.balint'>@noal.balint</a>
         </div>
-        <div className='pb-6' />
+        <div className='pb-10' />
         <Button />
       </div>
     </>
