@@ -10,7 +10,7 @@ export default function Home(): React.ReactElement {
         </p>
         <div className='flex flex-row w-full justify-between'>
           <span>phone</span>
-          <span>+1 250 538 7329</span>
+          <span>+1 672 381 1499</span>
         </div>
         <div className='flex flex-row w-full justify-between py-4'>
           <span>email</span>
